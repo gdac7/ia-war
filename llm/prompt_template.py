@@ -41,6 +41,7 @@ class AIHard:
         pass
 
 class AIPromptManager:
+    @staticmethod
     def get_prompt(dif: str):
         if dif == "easy":
             AIEasy.get_easy_prompt()
