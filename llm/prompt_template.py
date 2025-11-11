@@ -4,8 +4,8 @@ from dataclasses import dataclass
 ## 1 fase-> alocação de tropas -> Prompt -> Onde botar as tropas e quantas
 ## 2 fase -> ataque. Prompt -> quem atacar
 ## 2 fase -> Precisamos de prompts dinamicos e chamadas dinamicas para cada decisão de ataque
-## O bot vai falar que quer atackar x. Depois do ataque de X, dependendo do que aconteceu, o bot pode decidir que 
-## quer continuar o ataque ou não, ou que quer mudar os ataques.
+## O bot vai falar que quer atackar x. Depois do ataque de X, dependendo do que aconteceu, o bot pode decidir se
+## quer continuar o ataque ou não, ou se quer mudar os ataques.
 ## 3 fase: fortificação: Um único prompt
 
 @dataclass
