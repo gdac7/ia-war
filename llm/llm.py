@@ -1,20 +1,31 @@
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 import torch
 from typing import List, Dict, Optional
 
 class LocalModelTransformers():
-    def __init__(self, model_name, device: str = "auto"):
+    def __init__(self, model_name, bnb_config=True, device: str = "auto"):
+        if bnb_config:
+            bnb_config = BitsAndBytesConfig(
+                load_in_4bit=True,
+                bnb_4bit_use_double_quant=True,
+                bnb_4bit_quant_type="nf4",
+                bnb_4bit_compute_dtype=torch.bfloat16
+            )
+        else:
+            bnb_config = None
+        self.model = AutoModelForCausalLM.from_pretrained(
+            model_name,
+            quantization_config=bnb_config,
+            device_map="auto",
+            torch_dtype=torch.bfloat16
+        )
         self.tokenizer = AutoTokenizer.from_pretrained(
             model_name,
             padding_side="left"
         )
-        self.model = AutoModelForCausalLM.from_pretrained(
-            model_name,
-            device_map=device,
-            dtype=torch.bfloat16
-        )
+        
         if self.tokenizer.pad_token_id is None:
-            self.tokenizer.pad_token_id = self.tokenzier.eos_token_id
+            self.tokenizer.pad_token_id = self.tokenizer.eos_token_id
             self.model.config.pad_token_id = self.model.config.eos_token_id
         
     def generate(
@@ -47,23 +58,24 @@ class LocalModelTransformers():
                         add_generation_prompt=True
                     )
                     plain_text += condition
-                    inputs = self.tokenizer(plain_text, return_tensors="pt")
+                    inputs = self.tokenizer(plain_text, return_tensors="pt").to(self.model.device)
                 except:
                     plain_text = f"{system_prompt}\n\n{user_prompt}" if system_prompt else user_prompt
                     plain_text += condition
+                    messages = [{"role": "user", "content": plain_text}]
                     inputs = self.tokenizer.apply_chat_template(
                         messages,
                         tokenize=False,
                         add_generation_prompt=True
                     )
-                    inputs = self.tokenizer(plain_text, return_tensors="pt")
+                    inputs = self.tokenizer(plain_text, return_tensors="pt").to(self.model.device)
             else:
                 plain_text = f"{system_prompt}\n\n{user_prompt}" if system_prompt else user_prompt
                 plain_text += condition
-                inputs = self.tokenizer(plain_text, return_tensors="pt")
+                inputs = self.tokenizer(plain_text, return_tensors="pt").to(self.model.device)
             
             
-            output_ids = self.model_generate(**inputs, **generation_params)
+            output_ids = self.model.generate(**inputs, **generation_params)
             input_length = inputs['input_ids'].shape[1]
             generated_tokens = output_ids[0][input_length:]
             final_response = self.wrapper(
@@ -78,7 +90,7 @@ class LocalModelTransformers():
             return final_response
         
     def wrapper(self, response: str):
-        tag = "[END OF THE PLAY]"
+        tag = "[END OF MOVE]"
         if tag in response:
             return response.split(tag)[0]
         return response
