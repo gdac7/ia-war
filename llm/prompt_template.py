@@ -91,7 +91,7 @@ class AIMedium:
     You are limited by the constraints of each phase. The current phase is {phase}.
     The data about the game is: 
     {data}
-    Please provide you in the corresponding JSON format: \n{phase_json_expected}
+    Please provide your answer in the corresponding JSON format: \n{phase_json_expected}
     """
     user_prompt = "Please adhere to the system message and provide your response."
     condition = "Sure, I will make my move following the instructions given. I will use tags [START OF MOVE] and [END OF MOVE] for clearer presentation. Here is the move:\n[START OF MOVE]"
