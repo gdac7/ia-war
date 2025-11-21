@@ -38,5 +38,45 @@
         "bot": 4,
         "phase": "reinforcement",
         "time": 8.055295944213867
+    },
+    {
+        "bot": 1,
+        "phase": "first-reinforcement",
+        "time": 15.398485898971558
+    },
+    {
+        "bot": 2,
+        "phase": "first-reinforcement",
+        "time": 11.411736011505127
+    },
+    {
+        "bot": 3,
+        "phase": "first-reinforcement",
+        "time": 8.387766361236572
+    },
+    {
+        "bot": 4,
+        "phase": "first-reinforcement",
+        "time": 9.658858060836792
+    },
+    {
+        "bot": 1,
+        "phase": "reinforcement",
+        "time": 12.860450029373169
+    },
+    {
+        "bot": 2,
+        "phase": "reinforcement",
+        "time": 9.30646562576294
+    },
+    {
+        "bot": 3,
+        "phase": "reinforcement",
+        "time": 7.718630790710449
+    },
+    {
+        "bot": 4,
+        "phase": "reinforcement",
+        "time": 8.541398763656616
     }
 ]

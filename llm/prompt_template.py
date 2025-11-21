@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 import random
 import json
+from phase_prompts import PhasePrompt
+
 ## Prompts diferentes
 ## 1 fase-> alocação de tropas -> Prompt -> Onde botar as tropas e quantas
 ## 2 fase -> ataque. Prompt -> quem atacar
@@ -8,8 +10,6 @@ import json
 ## O bot vai falar que quer atackar x. Depois do ataque de X, dependendo do que aconteceu, o bot pode decidir se
 ## quer continuar o ataque ou não, ou se quer mudar os ataques.
 ## 3 fase: fortificação: Um único prompt
-
-
 
 #### Padrões pra usar dps
 # first_reinforcement:
@@ -35,115 +35,6 @@ def get_examples(n, phase):
     phase_examples = [item for item in examples if item["response"]["action"].lower() == phase.lower()]
     return phase_examples[:n]
     
-
-@dataclass
-class PhasePrompt:
-    @staticmethod
-    def get_phase_prompt(phase):
-        match phase:
-            case "first_reinforcement":
-                game_data_json = """{
-                    "objectiveType": Your game objective type,
-                    "objectiveDescription": Your Objective Description. You need to achieve this objective to win,
-                    "freeTroops": Troops you can place on ANY territory,
-                    "continentBonusTroops": {
-                        "south_america": Bonus troops ONLY for South America territories,
-                        "north_america": Bonus troops ONLY for North America territories,
-                        "europe": Bonus troops ONLY for Europe territories,
-                        "asia": Bonus troops ONLY for Asia territories,
-                        "africa": Bonus troops ONLY for Africa territories,
-                        "oceania": Bonus troops ONLY for Oceania territories
-                    },
-                    "totalAvailableTroops": Total troops to distribute (freeTroops + all bonuses),
-                    "ownedTerritories": [
-                        {"id": "territory_id", "territoryName": "name", "continent": "continent_name", "troops": current_troops}
-                    ]
-                }
-                """
-                pattern = """
-                    first_reinforcement:
-                        - Objective: Initial territory setup. You will place starting troops on your already-assigned territories;
-                        - TROOP RULES:
-                            1. freeTroops can be placed on ANY territory you own
-                            2. continentBonusTroops can ONLY be placed on territories of that specific continent
-                            3. Example: if continentBonusTroops.south_america = 2, those 2 troops can ONLY go to South America territories
-                        - Constraints:
-                            1. Territory must be owned by you
-                            2. The SUM of all troops in placements MUST EQUAL totalAvailableTroops
-                            3. Respect continent restrictions for bonus troops
-                """
-                json_expected = """
-                {
-                    "action": "first_reinforcement",
-                    "placements": [
-                        {"territoryId": "id of the territory that will be reinforced", "troops": number_of_troops},
-                        {"territoryId": "another_territory_id", "troops": number_of_troops}
-                    ]
-                }
-                """
-            case "reinforcement":
-                game_data_json = """{
-                    "objectiveType": Your game objective type,
-                    "objectiveDescription": Your Objective Description. You need to achieve this objective to win,
-                    "freeTroops": Troops you can place on ANY territory,
-                    "continentBonusTroops": {
-                        "south_america": Bonus troops ONLY for South America territories,
-                        "north_america": Bonus troops ONLY for North America territories,
-                        "europe": Bonus troops ONLY for Europe territories,
-                        "asia": Bonus troops ONLY for Asia territories,
-                        "africa": Bonus troops ONLY for Africa territories,
-                        "oceania": Bonus troops ONLY for Oceania territories
-                    },
-                    "totalAvailableTroops": Total troops to distribute (freeTroops + all bonuses),
-                    "ownedTerritories": [
-                        {
-                            "id": territory identifier,
-                            "territoryName": name of the territory,
-                            "continent": which continent it belongs to,
-                            "troops": current troops in this territory,
-                            "enemyNeighbors": list of enemy territories adjacent to this one (for strategic decisions)
-                        }
-                    ]
-                }
-                """
-                pattern = """
-                    reinforcement:
-                        - Objective: Place reinforcement troops to strengthen your position for upcoming attacks or defense;
-                        - TROOP RULES:
-                            1. freeTroops can be placed on ANY territory you own
-                            2. continentBonusTroops can ONLY be placed on territories of that specific continent
-                            3. Example: if continentBonusTroops.south_america = 2, those 2 troops can ONLY go to South America territories
-                        - Strategic tips:
-                            1. Prioritize territories with enemyNeighbors (border territories)
-                            2. Concentrate troops where you plan to attack from
-                            3. Consider your objective when deciding where to reinforce
-                        - Constraints:
-                            1. Territory must be owned by you
-                            2. The SUM of all troops in placements MUST EQUAL totalAvailableTroops
-                            3. Respect continent restrictions for bonus troops
-                """
-                json_expected = """
-                {
-                    "action": "reinforcement",
-                    "placements": [
-                        {"territoryId": "id of territory to reinforce", "troops": number_of_troops},
-                        {"territoryId": "another_territory_id", "troops": number_of_troops}
-                    ]
-                }
-                """
-            case "attack":
-                game_data_json = """"""
-                pattern = """"""
-                json_expected = """"""
-            case "strategic":
-                game_data_json = """"""
-                pattern = """"""
-                json_expected = """"""
-
-            
-        return game_data_json, pattern, json_expected
-    
-
 @dataclass
 class PromptTemplate:
     system_prompt: str
@@ -185,7 +76,8 @@ class AIMedium:
     @staticmethod
     def get_medium_prompt(phase: str, data: str) -> PromptTemplate:
         game_data_json, pattern, json_expected = PhasePrompt.get_phase_prompt(phase)
-        few_shot = get_examples(5, phase)
+        if phase.lower() == "first_reinforcement":
+            few_shot = get_examples(5, phase)
         number_of_troops = data["totalAvailableTroops"]
         filled_sp = AIMedium.system_prompt.format(
             game_data_json=game_data_json,
