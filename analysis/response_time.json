@@ -2,181 +2,106 @@
     {
         "bot": 1,
         "phase": "first-reinforcement",
-        "time": 17.746716737747192
+        "time": 11.976644039154053
     },
     {
         "bot": 2,
         "phase": "first-reinforcement",
-        "time": 12.756646156311035
+        "time": 9.270786046981812
     },
     {
         "bot": 3,
         "phase": "first-reinforcement",
-        "time": 11.80734133720398
+        "time": 6.8649046421051025
     },
     {
         "bot": 4,
         "phase": "first-reinforcement",
-        "time": 13.317408323287964
-    },
-    {
-        "bot": 1,
-        "phase": "reinforcement",
-        "time": 15.626284837722778
-    },
-    {
-        "bot": 2,
-        "phase": "attack",
-        "time": 62.217491149902344
+        "time": 5.738527536392212
     },
     {
         "bot": 1,
         "phase": "first-reinforcement",
-        "time": 14.237889051437378
+        "time": 7.6685874462127686
     },
     {
         "bot": 2,
         "phase": "first-reinforcement",
-        "time": 9.879305601119995
+        "time": 5.392407655715942
     },
     {
         "bot": 3,
         "phase": "first-reinforcement",
-        "time": 10.639476537704468
+        "time": 7.522160768508911
     },
     {
         "bot": 4,
         "phase": "first-reinforcement",
-        "time": 10.977459192276001
-    },
-    {
-        "bot": 1,
-        "phase": "reinforcement",
-        "time": 13.92566990852356
-    },
-    {
-        "bot": 2,
-        "phase": "attack",
-        "time": 73.48218846321106
+        "time": 5.622608423233032
     },
     {
         "bot": 1,
         "phase": "first-reinforcement",
-        "time": 16.140575647354126
+        "time": 5.4117591381073
     },
     {
         "bot": 2,
         "phase": "first-reinforcement",
-        "time": 10.700719594955444
+        "time": 5.53896951675415
     },
     {
         "bot": 3,
         "phase": "first-reinforcement",
-        "time": 10.889458179473877
+        "time": 7.96078634262085
     },
     {
         "bot": 4,
         "phase": "first-reinforcement",
-        "time": 12.583922386169434
+        "time": 4.876829147338867
     },
     {
         "bot": 1,
         "phase": "first-reinforcement",
-        "time": 9.986138343811035
+        "time": 5.866458415985107
     },
     {
         "bot": 2,
         "phase": "first-reinforcement",
-        "time": 9.292778730392456
-    },
-    {
-        "bot": 3,
-        "phase": "reinforcement",
-        "time": 16.894644021987915
-    },
-    {
-        "bot": 4,
-        "phase": "attack",
-        "time": 16.113417625427246
-    },
-    {
-        "bot": 1,
-        "phase": "attack",
-        "time": 12.944072723388672
-    },
-    {
-        "bot": 2,
-        "phase": "attack",
-        "time": 8.259288549423218
+        "time": 7.422848701477051
     },
     {
         "bot": 3,
         "phase": "first-reinforcement",
-        "time": 12.88777208328247
+        "time": 9.386423349380493
     },
     {
         "bot": 4,
         "phase": "first-reinforcement",
-        "time": 12.997439622879028
+        "time": 5.181849956512451
     },
     {
         "bot": 1,
         "phase": "first-reinforcement",
-        "time": 10.535553455352783
+        "time": 5.077229022979736
     },
     {
         "bot": 2,
         "phase": "first-reinforcement",
-        "time": 8.126717329025269
+        "time": 4.904609203338623
     },
     {
         "bot": 3,
-        "phase": "reinforcement",
-        "time": 13.983272552490234
+        "phase": "first-reinforcement",
+        "time": 4.602771759033203
     },
     {
         "bot": 4,
-        "phase": "attack",
-        "time": 17.0525643825531
+        "phase": "first-reinforcement",
+        "time": 6.758888483047485
     },
     {
         "bot": 1,
-        "phase": "attack",
-        "time": 68.0639419555664
-    },
-    {
-        "bot": 2,
-        "phase": "reinforcement",
-        "time": 16.89692211151123
-    },
-    {
-        "bot": 3,
-        "phase": "attack",
-        "time": 16.269522666931152
-    },
-    {
-        "bot": 4,
-        "phase": "attack",
-        "time": 13.840952157974243
-    },
-    {
-        "bot": 1,
-        "phase": "reinforcement",
-        "time": 12.119791746139526
-    },
-    {
-        "bot": 2,
-        "phase": "attack",
-        "time": 16.078490495681763
-    },
-    {
-        "bot": 3,
-        "phase": "attack",
-        "time": 10.26287293434143
-    },
-    {
-        "bot": 4,
-        "phase": "attack",
-        "time": 10.563982963562012
+        "phase": "first-reinforcement",
+        "time": 4.954885482788086
     }
 ]

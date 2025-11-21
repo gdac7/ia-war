@@ -6,35 +6,27 @@ class PhasePrompt:
     def get_phase_prompt(phase):
         match phase:
             case "first_reinforcement":
-                game_data_json = """{
-                    "objectiveType": Your game objective type,
-                    "objectiveDescription": Your Objective Description. You need to achieve this objective to win,
-                    "freeTroops": Troops you can place on ANY territory,
-                    "continentBonusTroops": {
-                        "south_america": Bonus troops ONLY for South America territories,
-                        "north_america": Bonus troops ONLY for North America territories,
-                        "europe": Bonus troops ONLY for Europe territories,
-                        "asia": Bonus troops ONLY for Asia territories,
-                        "africa": Bonus troops ONLY for Africa territories,
-                        "oceania": Bonus troops ONLY for Oceania territories
+                game_data_json = """
+                {
+                    "objective": "{objectiveDescription}",
+                    "availableTroops": {
+                        "anywhere": {freeTroops},
+                        "continent_restricted": {continentBonusTroops},
                     },
-                    "totalAvailableTroops": Total troops to distribute (freeTroops + all bonuses),
-                    "ownedTerritories": [
-                        {"id": "territory_id", "territoryName": "name", "continent": "continent_name", "troops": current_troops}
-                    ]
+                    "map_state": {grouped_territories}
                 }
                 """
                 pattern = """
                     first_reinforcement:
-                        - Objective: Initial territory setup. You will place starting troops on your already-assigned territories;
-                        - Troop rules:
-                            1. freeTroops can be placed on ANY territory you own
-                            2. continentBonusTroops can ONLY be placed on territories of that specific continent
+                        - Goal: Secure your initial position;
+                        - Rules:
+                            1. 'anywhere' troops -> any territory
+                            2. 'restricted' troops -> only territories in that continent
                             3. Example: if continentBonusTroops.south_america = 2, those 2 troops can ONLY go to South America territories
-                        - Constraints:
-                            1. Territory must be owned by you
-                            2. The SUM of all troops in placements MUST EQUAL totalAvailableTroops
-                            3. Respect continent restrictions for bonus troops
+                        - Strategy:
+                            1. Prioritize territories marked "is_border": true (they face enemies).
+                            2. Do not reinforce "safe" territories (is_border: false) unless necessary.
+                            3. Try to secure a role continent if you're close
                 """
                 json_expected = """
                 {

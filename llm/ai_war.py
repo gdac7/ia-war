@@ -73,7 +73,7 @@ class AIWar:
         except json.JSONDecodeError as e:
             print(f"Failed to parse: {e}")
             print(f"Response was: {response}")
-            return fallback or {"error": "json_parse_failed"}
+            return fallback or {"error": "jsonParseFailed"}
 
 
 
