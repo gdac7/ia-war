@@ -59,11 +59,12 @@ class AIWar:
         response_json = self._get_response_json(response)
         return response_json
 
-    def _get_response_json(self, response):
+    def _get_response_json(self, response, fallback=None):
         json_start = response.find('{')
         json_end = response.rfind('}') + 1
         if json_start == -1 or json_end == 0:
-            return None
+            print(f"No JSON found in response: {response}")
+            return fallback or {"error": "no_json_found"}
         json_str = response[json_start:json_end]
         json_str = re.sub(r",\s*([}\]])", r"\1", json_str)
         try:
@@ -72,7 +73,7 @@ class AIWar:
         except json.JSONDecodeError as e:
             print(f"Failed to parse: {e}")
             print(f"Response was: {response}")
-            return None
+            return fallback or {"error": "json_parse_failed"}
 
 
 

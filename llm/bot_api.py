@@ -44,7 +44,7 @@ class GenerationRequest(BaseModel):
 class GenerationResponse(BaseModel):
     generated_json: dict
 
-@app.post("/first-reinforcement", response_model=GenerationResponse)
+@app.post("/first_reinforcement", response_model=GenerationResponse)
 async def first_reinforcement_endpoint(request: GenerationRequest):
     start = time.time()
     ai = AIWar(app.state.model)

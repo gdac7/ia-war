@@ -1,3 +1,5 @@
+from dataclasses import dataclass
+
 @dataclass
 class PhasePrompt:
     @staticmethod
@@ -25,7 +27,7 @@ class PhasePrompt:
                 pattern = """
                     first_reinforcement:
                         - Objective: Initial territory setup. You will place starting troops on your already-assigned territories;
-                        - TROOP RULES:
+                        - Troop rules:
                             1. freeTroops can be placed on ANY territory you own
                             2. continentBonusTroops can ONLY be placed on territories of that specific continent
                             3. Example: if continentBonusTroops.south_america = 2, those 2 troops can ONLY go to South America territories
@@ -39,7 +41,7 @@ class PhasePrompt:
                     "action": "first_reinforcement",
                     "placements": [
                         {"territoryId": "id of the territory that will be reinforced", "troops": number_of_troops},
-                        {"territoryId": "another_territory_id", "troops": number_of_troops}
+                        {"territoryId": "another_territory_id", "troops": number_of_troops},
                     ]
                 }
                 """
@@ -75,10 +77,6 @@ class PhasePrompt:
                             1. freeTroops can be placed on ANY territory you own
                             2. continentBonusTroops can ONLY be placed on territories of that specific continent
                             3. Example: if continentBonusTroops.south_america = 2, those 2 troops can ONLY go to South America territories
-                        - Strategic tips:
-                            1. Prioritize territories with enemyNeighbors (border territories)
-                            2. Concentrate troops where you plan to attack from
-                            3. Consider your objective when deciding where to reinforce
                         - Constraints:
                             1. Territory must be owned by you
                             2. The SUM of all troops in placements MUST EQUAL totalAvailableTroops
@@ -89,7 +87,7 @@ class PhasePrompt:
                     "action": "reinforcement",
                     "placements": [
                         {"territoryId": "id of territory to reinforce", "troops": number_of_troops},
-                        {"territoryId": "another_territory_id", "troops": number_of_troops}
+                        {"territoryId": "another_territory_id", "troops": number_of_troops},
                     ]
                 }
                 """
@@ -97,7 +95,7 @@ class PhasePrompt:
                 game_data_json = """{
                     "objectiveType": Your game objective type,
                     "objectiveDescription": Your Objective Description. You need to achieve this objective to win,
-                    "attackableTerritories": [
+                    "territoriesCanAttackFrom": [
                         {
                             "id": territory identifier,
                             "territoryName": name of your territory,
@@ -114,17 +112,13 @@ class PhasePrompt:
                 pattern = """
                     attack:
                         - Objective: Attack enemy territories to conquer them and achieve your objective;
-                        - ATTACK RULES:
-                            1. You can only attack FROM territories in attackableTerritories (troops >= 2)
-                            2. You can only attack TO enemy territories listed in enemyNeighbors
+                        - Attack rules:
+                            1. You can only attack from territories in territoriesCanAttackFrom (troops >= 2)
+                            2. You can only attack to enemy territories listed in enemyNeighbors
                             3. attackDice must be between 1 and maxDice for that territory
-                            4. You can choose to SKIP attacking by setting "skipAttack": true
-                        - Strategic tips:
-                            1. Attack enemies with fewer troops than your attackDice
-                            2. Consider your objective when choosing targets
-                            3. Prioritize conquering continents for bonus troops
+                            4. You can choose to skip attacking by setting "skipAttack": true
                         - Constraints:
-                            1. attackerTerritoryId must be in attackableTerritories
+                            1. attackerTerritoryId must be in territoriesCanAttackFrom
                             2. defenderTerritoryId must be in that territory's enemyNeighbors
                             3. attackDice must be between 1 and maxDice
                 """
@@ -134,20 +128,9 @@ class PhasePrompt:
                     "attackerTerritoryId": "your_territory_id",
                     "defenderTerritoryId": "enemy_territory_id",
                     "attackDice": number_of_dice (1 to maxDice),
-                    "skipAttack": false
+                    "skipAttack": false,
                 }
-
-                To skip attacking (end attack phase):
-                {
-                    "action": "attack",
-                    "skipAttack": true
-                }
-
-                Example - Attack with 3 dice:
-                {"action": "attack", "attackerTerritoryId": "brazil", "defenderTerritoryId": "argentina", "attackDice": 3, "skipAttack": false}
-
-                Example - Skip attack:
-                {"action": "attack", "skipAttack": true}
+                or {"action": "attack", "skipAttack": true,}
                 """
             case "strategic":
                 game_data_json = """"""

@@ -2,46 +2,94 @@
   {
     "game_data": {
       "objectiveType": "conquer_continents",
-      "objectiveDescription": "Conquer South America and Africa.",
       "totalAvailableTroops": 5,
-      "ownedTerritories": ["brazil", "argentina", "peru", "venezuela"]
+      "ownedTerritories": ["brazil", "argentina", "peru"]
     },
     "response": {
       "action": "first_reinforcement",
-      "placements": [
-        {"territoryId": "brazil", "troops": 3},
-        {"territoryId": "argentina", "troops": 2}
-      ]
+      "placements": [{"territoryId": "brazil", "troops": 3}, {"territoryId": "argentina", "troops": 2}]
     }
   },
   {
     "game_data": {
       "objectiveType": "destroy_player",
-      "objectiveDescription": "Destroy the Blue Player.",
-      "totalAvailableTroops": 3,
-      "ownedTerritories": ["alaska", "northwest_territory", "alberta"]
+      "totalAvailableTroops": 4,
+      "ownedTerritories": ["alaska", "alberta"]
     },
     "response": {
       "action": "first_reinforcement",
-      "placements": [
-        {"territoryId": "alaska", "troops": 3}
+      "placements": [{"territoryId": "alaska", "troops": 4}]
+    }
+  },
+  {
+    "game_data": {
+      "objectiveType": "conquer_continents",
+      "freeTroops": 3,
+      "totalAvailableTroops": 5,
+      "ownedTerritories": [
+        {"id": "brazil", "continent": "south_america", "troops": 1, "enemyNeighbors": ["north_africa"]},
+        {"id": "mexico", "continent": "north_america", "troops": 3, "enemyNeighbors": ["central_america"]}
       ]
+    },
+    "response": {
+      "action": "reinforcement",
+      "placements": [{"territoryId": "brazil", "troops": 2}, {"territoryId": "mexico", "troops": 3}]
+    }
+  },
+  {
+    "game_data": {
+      "objectiveType": "destroy_player",
+      "totalAvailableTroops": 4,
+      "ownedTerritories": [
+        {"id": "iceland", "troops": 2, "enemyNeighbors": ["greenland"]},
+        {"id": "great_britain", "troops": 5, "enemyNeighbors": ["northern_europe"]}
+      ]
+    },
+    "response": {
+      "action": "reinforcement",
+      "placements": [{"territoryId": "great_britain", "troops": 4}]
     }
   },
   {
     "game_data": {
       "objectiveType": "conquer_territories",
-      "objectiveDescription": "Conquer 24 territories of your choice.",
-      "totalAvailableTroops": 8,
-      "ownedTerritories": ["egypt", "north_africa", "east_africa", "congo", "madagascar", "south_africa"]
+      "territoriesCanAttackFrom": [
+        {"id": "alaska", "troops": 5, "maxDice": 3, "enemyNeighbors": [{"id": "kamchatka", "troops": 2}, {"id": "northwest_territory", "troops": 10}]}
+      ]
     },
     "response": {
-      "action": "first_reinforcement",
-      "placements": [
-        {"territoryId": "egypt", "troops": 3},
-        {"territoryId": "north_africa", "troops": 3},
-        {"territoryId": "east_africa", "troops": 2}
+      "action": "attack",
+      "attackerTerritoryId": "alaska",
+      "defenderTerritoryId": "kamchatka",
+      "attackDice": 3,
+      "skipAttack": false
+    }
+  },
+  {
+    "game_data": {
+      "objectiveType": "conquer_continents",
+      "territoriesCanAttackFrom": [
+        {"id": "middle_east", "troops": 4, "maxDice": 3, "enemyNeighbors": [{"id": "egypt", "troops": 1}, {"id": "russia", "troops": 6}]}
       ]
+    },
+    "response": {
+      "action": "attack",
+      "attackerTerritoryId": "middle_east",
+      "defenderTerritoryId": "egypt",
+      "attackDice": 3,
+      "skipAttack": false
+    }
+  },
+  {
+    "game_data": {
+      "objectiveType": "destroy_player",
+      "territoriesCanAttackFrom": [
+        {"id": "western_australia", "troops": 2, "maxDice": 1, "enemyNeighbors": [{"id": "eastern_australia", "troops": 5}]}
+      ]
+    },
+    "response": {
+      "action": "attack",
+      "skipAttack": true
     }
   }
 ]
