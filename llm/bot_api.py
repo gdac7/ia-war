@@ -42,12 +42,13 @@ async def reinforcement_endpoint(request: GenerationRequest):
     ai = AIWar(app.state.model)
     specific_reinforcement_phase = request.data.pop("phase")
     stats_data = request.data.pop("botStats")
+    bot_name = request.data.pop("botName")
     generated_json = ai.reinforcement(
         player_data=request.data
     )
     duration_time = time.time() - start
     create_analysis_files(app)
-    save_data(app, specific_reinforcement_phase, duration_time, stats_data)
+    save_data(app, specific_reinforcement_phase, duration_time, stats_data, bot_name)
     return {"generated_json": generated_json, "duration_time": f"{duration_time:.2f}s"}
 
 
@@ -56,11 +57,12 @@ async def attack_endpoint(request: GenerationRequest):
     start = time.time()
     ai = AIWar(app.state.model)
     stats_data = request.data.pop("botStats")
+    bot_name = request.data.pop("botName")
     generated_json = ai.attack(
         player_data=request.data
     )
     duration_time = time.time() - start
-    save_data(app, "attack", duration_time, stats_data)
+    save_data(app, "attack", duration_time, stats_data, bot_name)
     return {"generated_json": generated_json, "duration_time": f"{duration_time:.2f}s"}
 
 

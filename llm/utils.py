@@ -15,10 +15,11 @@ def create_analysis_files(app):
     else:
         app.state.stats = []
 
-def save_data(app, phase, duration_time, stats_data):
+def save_data(app, phase, duration_time, stats_data, bot_name):
     response_info = {
             "phase": phase,
             "time": duration_time,
+            "botName": bot_name,
     }
     app.state.response_bot_time.append(response_info)
     app.state.stats.append(stats_data)
