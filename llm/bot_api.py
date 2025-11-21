@@ -30,7 +30,7 @@ def load_models():
     model = LocalModel(transformers=False, bnb_config=False)
     app.state.model = model
     app.state.bot_count = 0
-    analysis_path = "analysis/tesponse_time.json"
+    analysis_path = "analysis/response_time.json"
     if os.path.exists(analysis_path):
         with open(analysis_path, "r") as f:
             app.state.response_bot_time = json.load(f)
@@ -45,7 +45,7 @@ class GenerationResponse(BaseModel):
     generated_json: dict
 
 @app.post("/first-reinforcement", response_model=GenerationResponse)
-async def generate_play_endpoint(request: GenerationRequest):
+async def first_reinforcement_endpoint(request: GenerationRequest):
     start = time.time()
     ai = AIWar(app.state.model)
     generated_json = ai.first_reinforcement(
@@ -54,13 +54,35 @@ async def generate_play_endpoint(request: GenerationRequest):
     duration_time = time.time() - start
     info = {
             "bot": (app.state.bot_count % 4) + 1,
+            "phase": "first-reinforcement",
             "time": duration_time,
     }
+    app.state.bot_count += 1
     app.state.response_bot_time.append(info)
     with open("analysis/response_time.json", "w") as f:
         json.dump(app.state.response_bot_time, f, indent=4)
     
 
+    return {"generated_json": generated_json, "duration_time": f"{duration_time:.2f}s"}
+
+@app.post("/reinforcement", response_model=GenerationResponse)
+async def reinforcement_endpoint(request: GenerationRequest):
+    start = time.time()
+    ai = AIWar(app.state.model)
+    generated_json = ai.reinforcement(
+        player_data=request.data
+    )
+    duration_time = time.time() - start
+    info = {
+        "bot": (app.state.bot_count % 4) + 1,
+        "phase": "reinforcement",
+        "time": duration_time,
+    }
+    app.state.bot_count += 1
+    app.state.response_bot_time.append(info)
+    with open("analysis/response_time.json", "w") as f:
+        json.dump(app.state.response_bot_time, f, indent=4)
+    
     return {"generated_json": generated_json, "duration_time": f"{duration_time:.2f}s"}
 
 

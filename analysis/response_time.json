@@ -1,14 +1,67 @@
 [
     {
         "bot": 1,
-        "time": 9.970073461532593
+        "phase": "first-reinforcement",
+        "time": 9.62833046913147
+    },
+    {
+        "bot": 2,
+        "phase": "first-reinforcement",
+        "time": 5.392513751983643
+    },
+    {
+        "bot": 3,
+        "phase": "first-reinforcement",
+        "time": 5.7704174518585205
+    },
+    {
+        "bot": 4,
+        "phase": "first-reinforcement",
+        "time": 5.120902061462402
     },
     {
         "bot": 1,
-        "time": 5.328249216079712
+        "phase": "first-reinforcement",
+        "time": 9.961852788925171
+    },
+    {
+        "bot": 2,
+        "phase": "first-reinforcement",
+        "time": 5.373258352279663
+    },
+    {
+        "bot": 3,
+        "phase": "first-reinforcement",
+        "time": 5.153425693511963
+    },
+    {
+        "bot": 4,
+        "phase": "first-reinforcement",
+        "time": 6.492480278015137
     },
     {
         "bot": 1,
-        "time": 6.923429250717163
+        "phase": "first-reinforcement",
+        "time": 8.837218999862671
+    },
+    {
+        "bot": 2,
+        "phase": "first-reinforcement",
+        "time": 4.7606730461120605
+    },
+    {
+        "bot": 3,
+        "phase": "first-reinforcement",
+        "time": 5.410664796829224
+    },
+    {
+        "bot": 4,
+        "phase": "first-reinforcement",
+        "time": 4.169724225997925
+    },
+    {
+        "bot": 1,
+        "phase": "reinforcement",
+        "time": 9.339784383773804
     }
 ]
