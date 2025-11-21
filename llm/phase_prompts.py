@@ -33,26 +33,26 @@ class PhasePrompt:
             case "attack":
                 pattern = """
                     attack:
-                        - Objective: Attack enemy territories to conquer them and achieve your objective;
-                        - Attack rules:
-                            1. You can only attack from territories in territoriesCanAttackFrom (troops >= 2)
-                            2. You can only attack to enemy territories listed in enemyNeighbors
-                            3. attackDice must be between 1 and maxDice for that territory
-                            4. You can choose to skip attacking by setting "skipAttack": true
-                        - Constraints:
-                            1. attackerTerritoryId must be in territoriesCanAttackFrom
-                            2. defenderTerritoryId must be in that territory's enemyNeighbors
-                            3. attackDice must be between 1 and maxDice
+                        - Goal: Conquer territories to fullfill objective.
+                        - Rules:
+                            1. You need > 1 troops to attack
+                            2. Max dice = troops - 1 (capped at 3).
+                            3. You can only attack to enemy territories listed in enemyNeighbors                        
+                        - Strategy:
+                            1. Attack where you have more troops than the enemy (e.g., 5 vs 2 is good).
+                            2. Avoid attacking 2 vs 2 or 3 vs 3 (high risk).
+                            3. If you want stop attacking, send "skipAttack": true.
                 """
                 json_expected = """
                 {
                     "action": "attack",
-                    "attackerTerritoryId": "your_territory_id",
-                    "defenderTerritoryId": "enemy_territory_id",
-                    "attackDice": number_of_dice (1 to maxDice),
+                    "attackerTerritoryId": "your territory id",
+                    "defenderTerritoryId": "enemy territory id",
+                    "attackDice": int,
                     "skipAttack": false,
                 }
-                or {"action": "attack", "skipAttack": true,}
+                OR
+                { "action": "attack", "skipAttack": true, }
                 """
             case "strategic":
                 pattern = """"""

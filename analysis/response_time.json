@@ -1,172 +1,174 @@
 [
     {
-        "bot": 1,
-        "phase": "first-reinforcement",
-        "time": 11.492181539535522
+        "phase": "first_reinforcement",
+        "time": 7.41394567489624
     },
     {
-        "bot": 2,
-        "phase": "first-reinforcement",
-        "time": 5.458550691604614
+        "phase": "first_reinforcement",
+        "time": 7.773408889770508
     },
     {
-        "bot": 3,
-        "phase": "first-reinforcement",
-        "time": 4.834979057312012
+        "phase": "first_reinforcement",
+        "time": 5.457967519760132
     },
     {
-        "bot": 4,
-        "phase": "first-reinforcement",
-        "time": 5.083251237869263
+        "phase": "first_reinforcement",
+        "time": 4.833891868591309
     },
     {
-        "bot": 1,
-        "phase": "first-reinforcement",
-        "time": 5.316349267959595
-    },
-    {
-        "bot": 2,
-        "phase": "first-reinforcement",
-        "time": 5.502256631851196
-    },
-    {
-        "bot": 3,
-        "phase": "first-reinforcement",
-        "time": 8.61879825592041
-    },
-    {
-        "bot": 4,
-        "phase": "first-reinforcement",
-        "time": 5.080314874649048
-    },
-    {
-        "bot": 1,
         "phase": "reinforcement",
-        "time": 9.913209915161133
+        "time": 7.203989267349243
     },
     {
-        "bot": 2,
-        "phase": "reinforcement",
-        "time": 5.7858500480651855
-    },
-    {
-        "bot": 3,
-        "phase": "reinforcement",
-        "time": 5.248269081115723
-    },
-    {
-        "bot": 4,
-        "phase": "reinforcement",
-        "time": 5.511716842651367
-    },
-    {
-        "bot": 1,
-        "phase": "reinforcement",
-        "time": 5.537867784500122
-    },
-    {
-        "bot": 2,
-        "phase": "reinforcement",
-        "time": 5.576017618179321
-    },
-    {
-        "bot": 3,
-        "phase": "reinforcement",
-        "time": 4.847835063934326
-    },
-    {
-        "bot": 4,
-        "phase": "reinforcement",
-        "time": 8.680537700653076
-    },
-    {
-        "bot": 1,
-        "phase": "reinforcement",
-        "time": 5.912551164627075
-    },
-    {
-        "bot": 2,
-        "phase": "reinforcement",
-        "time": 7.286057233810425
-    },
-    {
-        "bot": 3,
-        "phase": "reinforcement",
-        "time": 6.251703977584839
-    },
-    {
-        "bot": 4,
-        "phase": "reinforcement",
-        "time": 7.891149044036865
-    },
-    {
-        "bot": 1,
-        "phase": "reinforcement",
-        "time": 4.58070182800293
-    },
-    {
-        "bot": 2,
-        "phase": "reinforcement",
-        "time": 5.8127171993255615
-    },
-    {
-        "bot": 3,
-        "phase": "reinforcement",
-        "time": 5.975939512252808
-    },
-    {
-        "bot": 4,
-        "phase": "reinforcement",
-        "time": 5.590378046035767
-    },
-    {
-        "bot": 1,
-        "phase": "reinforcement",
-        "time": 4.559154748916626
-    },
-    {
-        "bot": 2,
-        "phase": "reinforcement",
-        "time": 5.756176710128784
-    },
-    {
-        "bot": 3,
-        "phase": "reinforcement",
-        "time": 5.10591721534729
-    },
-    {
-        "bot": 4,
         "phase": "attack",
-        "time": 15.131643056869507
+        "time": 11.925206661224365
     },
     {
-        "bot": 1,
-        "phase": "attack",
-        "time": 11.38146448135376
+        "phase": "reinforcement",
+        "time": 5.573680400848389
     },
     {
-        "bot": 2,
-        "phase": "attack",
-        "time": 9.16904091835022
+        "phase": "first_reinforcement",
+        "time": 6.314461946487427
     },
     {
-        "bot": 3,
-        "phase": "attack",
-        "time": 12.351926803588867
+        "phase": "first_reinforcement",
+        "time": 8.368768692016602
     },
     {
-        "bot": 4,
-        "phase": "attack",
-        "time": 11.622259378433228
+        "phase": "first_reinforcement",
+        "time": 5.539352655410767
     },
     {
-        "bot": 1,
-        "phase": "attack",
-        "time": 8.47356915473938
+        "phase": "first_reinforcement",
+        "time": 5.712389945983887
     },
     {
-        "bot": 2,
+        "phase": "reinforcement",
+        "time": 5.084960460662842
+    },
+    {
         "phase": "attack",
-        "time": 13.613609075546265
+        "time": 12.940914869308472
+    },
+    {
+        "phase": "reinforcement",
+        "time": 5.749020576477051
+    },
+    {
+        "phase": "attack",
+        "time": 13.888405799865723
+    },
+    {
+        "phase": "attack",
+        "time": 1.434959888458252
+    },
+    {
+        "phase": "first_reinforcement",
+        "time": 8.575324058532715
+    },
+    {
+        "phase": "first_reinforcement",
+        "time": 5.951801776885986
+    },
+    {
+        "phase": "first_reinforcement",
+        "time": 5.662008762359619
+    },
+    {
+        "phase": "first_reinforcement",
+        "time": 5.115735292434692
+    },
+    {
+        "phase": "reinforcement",
+        "time": 5.246699094772339
+    },
+    {
+        "phase": "first_reinforcement",
+        "time": 6.044726610183716
+    },
+    {
+        "phase": "first_reinforcement",
+        "time": 4.719651460647583
+    },
+    {
+        "phase": "first_reinforcement",
+        "time": 8.875173330307007
+    },
+    {
+        "phase": "first_reinforcement",
+        "time": 4.624844551086426
+    },
+    {
+        "phase": "reinforcement",
+        "time": 5.116663217544556
+    },
+    {
+        "phase": "attack",
+        "time": 10.54366397857666
+    },
+    {
+        "phase": "attack",
+        "time": 10.155701160430908
+    },
+    {
+        "phase": "attack",
+        "time": 12.03059697151184
+    },
+    {
+        "phase": "first_reinforcement",
+        "time": 6.3150012493133545
+    },
+    {
+        "phase": "first_reinforcement",
+        "time": 8.756840467453003
+    },
+    {
+        "phase": "first_reinforcement",
+        "time": 5.5819947719573975
+    },
+    {
+        "phase": "first_reinforcement",
+        "time": 5.687092304229736
+    },
+    {
+        "phase": "reinforcement",
+        "time": 4.9351136684417725
+    },
+    {
+        "phase": "attack",
+        "time": 11.232502222061157
+    },
+    {
+        "phase": "attack",
+        "time": 9.300945281982422
+    },
+    {
+        "phase": "first_reinforcement",
+        "time": 6.881830453872681
+    },
+    {
+        "phase": "first_reinforcement",
+        "time": 8.596448421478271
+    },
+    {
+        "phase": "first_reinforcement",
+        "time": 5.429835319519043
+    },
+    {
+        "phase": "first_reinforcement",
+        "time": 4.539806127548218
+    },
+    {
+        "phase": "reinforcement",
+        "time": 5.788658142089844
+    },
+    {
+        "phase": "attack",
+        "time": 11.190106868743896
+    },
+    {
+        "phase": "attack",
+        "time": 8.6955087184906
     }
 ]
