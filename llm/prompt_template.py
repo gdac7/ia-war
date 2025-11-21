@@ -29,28 +29,45 @@ import json
 #         - Parameters needed: fromTerritoryId (your territory to move troops from), toTerritoryId (your territory to move troops to) and troops (number of troops to move);
 #         - Constraints: Both territories must be owned by you. Territories must be neighbors. Source territory must keep at least 1 troop. Can oly move troops that were available at phase start (troops - 1 per territory). Only one strategic move allowed per turn.
 
+def get_examples(n, phase):
+    with open("llm/examples.json", "r") as f:
+        examples = json.load(f)
+    phase_examples = [item for item in examples if item["response"]["action"].lower() == phase.lower()]
+    return phase_examples[:n]
+    
+
 @dataclass
 class PhasePrompt:
     @staticmethod
     def get_phase_prompt(phase):
         if phase == "first_reinforcement":
+            game_data_json = f"""{{
+                "objectiveType": Your game objective type,
+                "objectiveDescription": Your Objective Description. You need to achieve this objective to win,
+                "totalAvailableTroops": Number of troops available. You must use this amount in your move,
+                "ownedTerritories": The territories that you own. You can only move troops between these territories,
+            }}
+            """
             pattern = """
                 first_reinforcement:
                     - Objective: Initial territory setup. You will place starting troops on your already-assigned territories;
                     - Parameters needed: territoryId (wich territory to place troops on) and troops;
-                    - Constraints: Territory must be owned by you and cannot place more troops than available. 
-                """
+                    - Constraints: 
+                        1. Territory must be owned by you
+                        2. You cannot place more troops than available in "availableTroops"
+                        3. Each territory can receive between 1 and totalAvailableTroops troops
+            """
             json_expected = """
             {
                 "action": "first_reinforcement",
                 "placements": [
-                    {"territoryId": id of the territory that will be reinforced, "troops": amount of troops},
-                    {same if you will reinforce some more territory}
+                    {"territoryId": "id of the territory that will be reinforced", "troops": number_of_troops},
+                    {"territoryId": "another_territory_id", "troops": number_of_troops},
                 ],
             }
             """
             
-            return pattern, json_expected
+            return game_data_json, pattern, json_expected
     
 
 @dataclass
@@ -58,7 +75,7 @@ class PromptTemplate:
     system_prompt: str
     user_prompt: str
     condition: str
-    temperature: float = 0.7
+    temperature: float = 0
     max_tokens: int = 4096
 
 @dataclass
@@ -76,36 +93,36 @@ class AIMedium:
     You are an intermediate player of the board game WAR.
     As an intermediate player, you already possess a sufficient knowledge, which allows you to make intelligent moves that give you an advantage in the short or long term.
     However, you are not advanced. You make mistakes and make plays that allow more experienced players to take advantage.
-    The mistakes you made is determined by a number. If the number is less than or equal to 6 you will make a intelligent play. Else you will make a bad play. 
-    Your answer should be in the following JSON format: \n{phase_json_expected}
-    Your objective is to make a play according to the current phase, which follows this pattern: {pattern}
-    You will receive the data about how you are doing in the game. The data follow the format:
-    {{
-        currentPlayer: the data about you. You will use data from here to make your move.
-        allPlayers: data about the others players,
-        allTerritories: data about of other player's territories.
-        phase: current phase,
-    }}
-    You are currently playing a WAR game with players of different skill levels.
-    The number that determines your level of play: {quality_number}
+    Your answer should be in the following JSON format:\n{phase_json_expected}
+    You will receive the current game data. The data follow the format:\n{game_data_json}    
+    You are currently playing a WAR game with players of different skill levels. 
+    You have an objective to win this game. Make the move that maximizes your chance of achieving your goal .
     You are limited by the constraints of each phase. The current phase is {phase}.
+    Your response must follow the phase pattern, which is:\n{pattern}
+    Few examples of an expected response from you, based on a the: \n{examples}\n
     The data about the game is: 
     {data}
-    Please provide your answer in the corresponding JSON format: \n{phase_json_expected}
+
+    You have {number_of_troops} troops, so you need to use exactly this number in this move. Please provide your answer in the corresponding JSON format:\n{phase_json_expected}
     """
-    user_prompt = "Please adhere to the system message and provide your response."
-    condition = "Sure, I will make my move following the instructions given. I will use tags [START OF MOVE] and [END OF MOVE] for clearer presentation. Here is the move:\n[START OF MOVE]"
+    user_prompt = "Please adhere to the system message and provide your response. "
+    condition = "Sure, I will make my move following the instructions given. I will use tags [START OF MOVE] and [END OF MOVE] for clearer presentation and I will follow the constraints in pattern. Here is the move:\n[START OF MOVE]"
+
+
     @staticmethod
     def get_medium_prompt(phase: str, data: str) -> PromptTemplate:
-        n = random.randint(1, 9)
-        print(n)
-        pattern, json_expected = PhasePrompt.get_phase_prompt("first_reinforcement")
+        game_data_json, pattern, json_expected = PhasePrompt.get_phase_prompt("first_reinforcement")
+        few_shot = get_examples(5, phase)
+        print(data)
+        number_of_troops = data["totalAvailableTroops"]
         filled_sp = AIMedium.system_prompt.format(
+            game_data_json=game_data_json,
             phase_json_expected=json_expected,
+            examples=json.dumps(few_shot),
             pattern=pattern,
-            quality_number=n,
             phase=phase,
-            data=data
+            data=data,
+            number_of_troops=number_of_troops,
         )
         print(filled_sp)
         return PromptTemplate(

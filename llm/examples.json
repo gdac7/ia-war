@@ -1,0 +1,47 @@
+[
+  {
+    "game_data": {
+      "objectiveType": "conquer_continents",
+      "objectiveDescription": "Conquer South America and Africa.",
+      "totalAvailableTroops": 5,
+      "ownedTerritories": ["brazil", "argentina", "peru", "venezuela"]
+    },
+    "response": {
+      "action": "first_reinforcement",
+      "placements": [
+        {"territoryId": "brazil", "troops": 3},
+        {"territoryId": "argentina", "troops": 2}
+      ]
+    }
+  },
+  {
+    "game_data": {
+      "objectiveType": "destroy_player",
+      "objectiveDescription": "Destroy the Blue Player.",
+      "totalAvailableTroops": 3,
+      "ownedTerritories": ["alaska", "northwest_territory", "alberta"]
+    },
+    "response": {
+      "action": "first_reinforcement",
+      "placements": [
+        {"territoryId": "alaska", "troops": 3}
+      ]
+    }
+  },
+  {
+    "game_data": {
+      "objectiveType": "conquer_territories",
+      "objectiveDescription": "Conquer 24 territories of your choice.",
+      "totalAvailableTroops": 8,
+      "ownedTerritories": ["egypt", "north_africa", "east_africa", "congo", "madagascar", "south_africa"]
+    },
+    "response": {
+      "action": "first_reinforcement",
+      "placements": [
+        {"territoryId": "egypt", "troops": 3},
+        {"territoryId": "north_africa", "troops": 3},
+        {"territoryId": "east_africa", "troops": 2}
+      ]
+    }
+  }
+]

@@ -1,14 +1,15 @@
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
 import uvicorn
-from llm.llm import LocalModelTransformers
+from llm.llm import LocalModel
 from llm.ai_war import AIWar
 from fastapi.middleware.cors import CORSMiddleware
-
-MODEL_NAME = "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit"
+import time
+import json
+import os
+MODEL_NAME_TRANSFORMERS = "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit"
 
 app = FastAPI(title="bot-war")
-
 origins = [
     "http://localhost:8081",  
     "http://localhost:8080",  
@@ -26,8 +27,15 @@ app.add_middleware(
 @app.on_event("startup")
 def load_models():
     print("Loading model...")
-    model = LocalModelTransformers(MODEL_NAME)
+    model = LocalModel(transformers=False, bnb_config=False)
     app.state.model = model
+    app.state.bot_count = 0
+    analysis_path = "analysis/tesponse_time.json"
+    if os.path.exists(analysis_path):
+        with open(analysis_path, "r") as f:
+            app.state.response_bot_time = json.load(f)
+    else:
+        app.state.response_bot_time = []
     print("Model loaded")
 
 class GenerationRequest(BaseModel):
@@ -37,12 +45,23 @@ class GenerationResponse(BaseModel):
     generated_json: dict
 
 @app.post("/first-reinforcement", response_model=GenerationResponse)
-async def generate_play_endpoing(request: GenerationRequest):
+async def generate_play_endpoint(request: GenerationRequest):
+    start = time.time()
     ai = AIWar(app.state.model)
     generated_json = ai.first_reinforcement(
         player_data=request.data
     )
-    return {"generated_json": generated_json}
+    duration_time = time.time() - start
+    info = {
+            "bot": (app.state.bot_count % 4) + 1,
+            "time": duration_time,
+    }
+    app.state.response_bot_time.append(info)
+    with open("analysis/response_time.json", "w") as f:
+        json.dump(app.state.response_bot_time, f, indent=4)
+    
+
+    return {"generated_json": generated_json, "duration_time": f"{duration_time:.2f}s"}
 
 
 if __name__ == "__main__":
