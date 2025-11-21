@@ -85,6 +85,27 @@ async def reinforcement_endpoint(request: GenerationRequest):
     
     return {"generated_json": generated_json, "duration_time": f"{duration_time:.2f}s"}
 
+@app.post("/attack", response_model=GenerationResponse)
+async def attack_endpoint(request: GenerationRequest):
+    start = time.time()
+    ai = AIWar(app.state.model)
+    generated_json = ai.attack(
+        player_data=request.data
+    )
+    duration_time = time.time() - start
+    info = {
+        "bot": (app.state.bot_count % 4) + 1,
+        "phase": "attack",
+        "time": duration_time,
+    }
+    app.state.bot_count += 1
+    app.state.response_bot_time.append(info)
+    with open("analysis/response_time.json", "w") as f:
+        json.dump(app.state.response_bot_time, f, indent=4)
+    
+    return {"generated_json": generated_json, "duration_time": f"{duration_time:.2f}s"}
+
+
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8080)
