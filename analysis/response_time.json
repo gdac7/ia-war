@@ -2,106 +2,171 @@
     {
         "bot": 1,
         "phase": "first-reinforcement",
-        "time": 11.976644039154053
+        "time": 11.492181539535522
     },
     {
         "bot": 2,
         "phase": "first-reinforcement",
-        "time": 9.270786046981812
+        "time": 5.458550691604614
     },
     {
         "bot": 3,
         "phase": "first-reinforcement",
-        "time": 6.8649046421051025
+        "time": 4.834979057312012
     },
     {
         "bot": 4,
         "phase": "first-reinforcement",
-        "time": 5.738527536392212
+        "time": 5.083251237869263
     },
     {
         "bot": 1,
         "phase": "first-reinforcement",
-        "time": 7.6685874462127686
+        "time": 5.316349267959595
     },
     {
         "bot": 2,
         "phase": "first-reinforcement",
-        "time": 5.392407655715942
+        "time": 5.502256631851196
     },
     {
         "bot": 3,
         "phase": "first-reinforcement",
-        "time": 7.522160768508911
+        "time": 8.61879825592041
     },
     {
         "bot": 4,
         "phase": "first-reinforcement",
-        "time": 5.622608423233032
+        "time": 5.080314874649048
     },
     {
         "bot": 1,
-        "phase": "first-reinforcement",
-        "time": 5.4117591381073
+        "phase": "reinforcement",
+        "time": 9.913209915161133
     },
     {
         "bot": 2,
-        "phase": "first-reinforcement",
-        "time": 5.53896951675415
+        "phase": "reinforcement",
+        "time": 5.7858500480651855
     },
     {
         "bot": 3,
-        "phase": "first-reinforcement",
-        "time": 7.96078634262085
+        "phase": "reinforcement",
+        "time": 5.248269081115723
     },
     {
         "bot": 4,
-        "phase": "first-reinforcement",
-        "time": 4.876829147338867
+        "phase": "reinforcement",
+        "time": 5.511716842651367
     },
     {
         "bot": 1,
-        "phase": "first-reinforcement",
-        "time": 5.866458415985107
+        "phase": "reinforcement",
+        "time": 5.537867784500122
     },
     {
         "bot": 2,
-        "phase": "first-reinforcement",
-        "time": 7.422848701477051
+        "phase": "reinforcement",
+        "time": 5.576017618179321
     },
     {
         "bot": 3,
-        "phase": "first-reinforcement",
-        "time": 9.386423349380493
+        "phase": "reinforcement",
+        "time": 4.847835063934326
     },
     {
         "bot": 4,
-        "phase": "first-reinforcement",
-        "time": 5.181849956512451
+        "phase": "reinforcement",
+        "time": 8.680537700653076
     },
     {
         "bot": 1,
-        "phase": "first-reinforcement",
-        "time": 5.077229022979736
+        "phase": "reinforcement",
+        "time": 5.912551164627075
     },
     {
         "bot": 2,
-        "phase": "first-reinforcement",
-        "time": 4.904609203338623
+        "phase": "reinforcement",
+        "time": 7.286057233810425
     },
     {
         "bot": 3,
-        "phase": "first-reinforcement",
-        "time": 4.602771759033203
+        "phase": "reinforcement",
+        "time": 6.251703977584839
     },
     {
         "bot": 4,
-        "phase": "first-reinforcement",
-        "time": 6.758888483047485
+        "phase": "reinforcement",
+        "time": 7.891149044036865
     },
     {
         "bot": 1,
-        "phase": "first-reinforcement",
-        "time": 4.954885482788086
+        "phase": "reinforcement",
+        "time": 4.58070182800293
+    },
+    {
+        "bot": 2,
+        "phase": "reinforcement",
+        "time": 5.8127171993255615
+    },
+    {
+        "bot": 3,
+        "phase": "reinforcement",
+        "time": 5.975939512252808
+    },
+    {
+        "bot": 4,
+        "phase": "reinforcement",
+        "time": 5.590378046035767
+    },
+    {
+        "bot": 1,
+        "phase": "reinforcement",
+        "time": 4.559154748916626
+    },
+    {
+        "bot": 2,
+        "phase": "reinforcement",
+        "time": 5.756176710128784
+    },
+    {
+        "bot": 3,
+        "phase": "reinforcement",
+        "time": 5.10591721534729
+    },
+    {
+        "bot": 4,
+        "phase": "attack",
+        "time": 15.131643056869507
+    },
+    {
+        "bot": 1,
+        "phase": "attack",
+        "time": 11.38146448135376
+    },
+    {
+        "bot": 2,
+        "phase": "attack",
+        "time": 9.16904091835022
+    },
+    {
+        "bot": 3,
+        "phase": "attack",
+        "time": 12.351926803588867
+    },
+    {
+        "bot": 4,
+        "phase": "attack",
+        "time": 11.622259378433228
+    },
+    {
+        "bot": 1,
+        "phase": "attack",
+        "time": 8.47356915473938
+    },
+    {
+        "bot": 2,
+        "phase": "attack",
+        "time": 13.613609075546265
     }
 ]

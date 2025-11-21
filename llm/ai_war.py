@@ -8,23 +8,6 @@ class AIWar:
         self.model = model
         self.action_history: List[str] = []
 
-    def first_reinforcement(self, player_data):
-        prompt_template = AIPromptManager.get_diff_prompt(
-            phase="first_reinforcement",
-            data=player_data,
-            diff="medium"
-        )
-        response = self.model.generate(
-            user_prompt=prompt_template.user_prompt,
-            system_prompt=prompt_template.system_prompt,
-            condition=prompt_template.condition,
-            max_tokens=prompt_template.max_tokens,
-            temperature=prompt_template.temperature,  
-        )
-        print(response)
-        response_json = self._get_response_json(response)
-        return response_json
-    
     def reinforcement(self, player_data):
         prompt_template = AIPromptManager.get_diff_prompt(
             phase="reinforcement",
@@ -36,7 +19,7 @@ class AIWar:
             system_prompt=prompt_template.system_prompt,
             condition=prompt_template.condition,
             max_tokens=prompt_template.max_tokens,
-            temperature=prompt_template.temperature,
+            temperature=prompt_template.temperature,  
         )
         print(response)
         response_json = self._get_response_json(response)

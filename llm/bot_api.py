@@ -44,17 +44,17 @@ class GenerationRequest(BaseModel):
 class GenerationResponse(BaseModel):
     generated_json: dict
 
-@app.post("/first_reinforcement", response_model=GenerationResponse)
-async def first_reinforcement_endpoint(request: GenerationRequest):
+@app.post("/reinforcement", response_model=GenerationResponse)
+async def reinforcement_endpoint(request: GenerationRequest):
     start = time.time()
     ai = AIWar(app.state.model)
-    generated_json = ai.first_reinforcement(
+    generated_json = ai.reinforcement(
         player_data=request.data
     )
     duration_time = time.time() - start
     info = {
             "bot": (app.state.bot_count % 4) + 1,
-            "phase": "first-reinforcement",
+            "phase": "reinforcement",
             "time": duration_time,
     }
     app.state.bot_count += 1
@@ -65,25 +65,25 @@ async def first_reinforcement_endpoint(request: GenerationRequest):
 
     return {"generated_json": generated_json, "duration_time": f"{duration_time:.2f}s"}
 
-@app.post("/reinforcement", response_model=GenerationResponse)
-async def reinforcement_endpoint(request: GenerationRequest):
-    start = time.time()
-    ai = AIWar(app.state.model)
-    generated_json = ai.reinforcement(
-        player_data=request.data
-    )
-    duration_time = time.time() - start
-    info = {
-        "bot": (app.state.bot_count % 4) + 1,
-        "phase": "reinforcement",
-        "time": duration_time,
-    }
-    app.state.bot_count += 1
-    app.state.response_bot_time.append(info)
-    with open("analysis/response_time.json", "w") as f:
-        json.dump(app.state.response_bot_time, f, indent=4)
+# @app.post("/reinforcement", response_model=GenerationResponse)
+# async def reinforcement_endpoint(request: GenerationRequest):
+#     start = time.time()
+#     ai = AIWar(app.state.model)
+#     generated_json = ai.reinforcement(
+#         player_data=request.data
+#     )
+#     duration_time = time.time() - start
+#     info = {
+#         "bot": (app.state.bot_count % 4) + 1,
+#         "phase": "reinforcement",
+#         "time": duration_time,
+#     }
+#     app.state.bot_count += 1
+#     app.state.response_bot_time.append(info)
+#     with open("analysis/response_time.json", "w") as f:
+#         json.dump(app.state.response_bot_time, f, indent=4)
     
-    return {"generated_json": generated_json, "duration_time": f"{duration_time:.2f}s"}
+#     return {"generated_json": generated_json, "duration_time": f"{duration_time:.2f}s"}
 
 @app.post("/attack", response_model=GenerationResponse)
 async def attack_endpoint(request: GenerationRequest):
