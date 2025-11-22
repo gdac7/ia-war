@@ -48,6 +48,7 @@ nvidia-nvjitlink-cu12==12.8.93
 nvidia-nvshmem-cu12==3.3.20
 nvidia-nvtx-cu12==12.8.90
 packaging==25.0
+pandas==2.3.3
 parso==0.8.5
 pexpect==4.9.0
 pillow==11.3.0
@@ -60,6 +61,7 @@ pydantic==2.12.4
 pydantic_core==2.41.5
 Pygments==2.19.2
 python-dateutil==2.9.0.post0
+pytz==2025.2
 PyYAML==6.0.3
 pyzmq==27.1.0
 regex==2025.11.3
@@ -81,6 +83,7 @@ transformers==4.57.1
 triton==3.5.1
 typing-inspection==0.4.2
 typing_extensions==4.15.0
+tzdata==2025.2
 urllib3==2.5.0
 uvicorn==0.38.0
 wcwidth==0.2.14
