@@ -8,12 +8,13 @@ class PhasePrompt:
             case "first_reinforcement" | "reinforcement":
                 pattern = f"""
                     {phase}:
-                        - Goal: Secure your position;
+                        - Goal: Secure your position.
                         - Rules:
-                            1. 'anywhere' troops -> any territory
-                            2. 'restricted' troops -> only territories in that continent
-                                2.1. Example: if continentBonusTroops.south_america = 2, those 2 troops can ONLY go to South America territories
-                            3. 'totalAvailableTroops' is the amount of troops that you move must use
+                            1. 'anywhere' troops -> any territory.
+                            2. 'restricted' troops -> only territories in that continent.
+                                2.1. Example: if continentBonusTroops.south_america = 2, those 2 troops can ONLY go to South America territories.
+                            3. 'totalAvailableTroops' is the amount of troops that you move must use.
+                            4. id format: Use the exact 'id' string from the input. Do not prepend continent names (e.g., use "argentina", not "south_america/argentina")
                         - Strategy:
                             1. Prioritize territories marked "is_border": true (they face enemies).
                             2. Do not reinforce "safe" territories (is_border: false) unless necessary.
@@ -28,27 +29,24 @@ class PhasePrompt:
                     ]
                 }}
                 """
-
-           
             case "attack":
                 pattern = """
                     attack:
-                        - Goal: Conquer territories to fullfill objective.
-                        - Rules:
-                            1. You need > 1 troops to attack
-                            2. Max dice = troops - 1 (capped at 3).
-                            3. You can only attack to enemy territories listed in enemyNeighbors                        
+                        - Goal: Conquer territories to fullfill objective.                        
                         - Strategy:
-                            1. Attack where you have more troops than the enemy (e.g., 5 vs 2 is good).
-                            2. Avoid attacking 2 vs 2 or 3 vs 3 (high risk).
-                            3. If you want stop attacking, send "skipAttack": true.
+                            1. Review the list of "validAttacks".
+                            2. Prioritize attacks where "advantage" is "high" or "medium".
+                            3. Prioritize targets that are in continents related to your objective.
+                            4. If all attacks have "low" advantage, choose "skipAttack": true.
+                        - Constraint:
+                            1. Yout must pick a pair (sourceId, targetId) exactly as listed in valid_attacks.
                 """
                 json_expected = """
                 {
                     "action": "attack",
-                    "attackerTerritoryId": "your territory id",
-                    "defenderTerritoryId": "enemy territory id",
-                    "attackDice": int,
+                    "attackerTerritoryId": "sourceId_from_list",
+                    "defenderTerritoryId": "targetId_from_list",
+                    "attackDice": int (usually min(3, sourceTroops - 1)),
                     "skipAttack": false,
                 }
                 OR

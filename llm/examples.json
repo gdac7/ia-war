@@ -29,7 +29,7 @@
     }
   },
   {
-    "phase": "first_reinforcement",
+    "phase": "reinforcement",
     "input": {
       "objective": "Destruir o Exército Azul",
       "anywhereTroops": 2,
@@ -76,6 +76,108 @@
       "placements": [
         {"territoryId": "indonesia", "troops": 3}
       ]
+    }
+  },
+  {
+    "phase": "attack",
+    "input": {
+      "objectiveType": "conquer_continents",
+      "objectiveDescription": "Conquistar a América do Sul e a Europa",
+      "botName": "RedBot",
+      "validAttacks": [
+        {
+          "sourceId": "brasil",
+          "sourceTroops": 5,
+          "sourceContinent": "south_america",
+          "targetId": "argentina",
+          "targetTroops": 1,
+          "targetContinent": "south_america",
+          "advantage": "high"
+        },
+        {
+          "sourceId": "brasil",
+          "sourceTroops": 5,
+          "sourceContinent": "south_america",
+          "targetId": "argelia",
+          "targetTroops": 3,
+          "targetContinent": "africa",
+          "advantage": "medium"
+        }
+      ]
+    },
+    "response": {
+      "action": "attack",
+      "attackerTerritoryId": "brasil",
+      "defenderTerritoryId": "argentina",
+      "attackDice": 3,
+      "skipAttack": false
+    }
+  },
+  {
+    "phase": "attack",
+    "input": {
+      "objectiveType": "conquer_continents",
+      "objectiveDescription": "Conquistar a Ásia",
+      "botName": "BlueBot",
+      "validAttacks": [
+        {
+          "sourceId": "japao",
+          "sourceTroops": 2,
+          "sourceContinent": "asia",
+          "targetId": "vladivostok",
+          "targetTroops": 5,
+          "targetContinent": "asia",
+          "advantage": "low"
+        },
+        {
+          "sourceId": "japao",
+          "sourceTroops": 2,
+          "sourceContinent": "asia",
+          "targetId": "mongolia",
+          "targetTroops": 4,
+          "targetContinent": "asia",
+          "advantage": "low"
+        }
+      ]
+    },
+    "response": {
+      "action": "attack",
+      "skipAttack": true
+    }
+  },
+  {
+    "phase": "attack",
+    "input": {
+      "objectiveType": "conquer_continents",
+      "objectiveDescription": "Conquistar a Europa e América do Norte",
+      "botName": "GreenBot",
+      "validAttacks": [
+        {
+          "sourceId": "oriente-medio",
+          "sourceTroops": 4,
+          "sourceContinent": "asia",
+          "targetId": "polonia",
+          "targetTroops": 2,
+          "targetContinent": "europe",
+          "advantage": "medium"
+        },
+        {
+          "sourceId": "oriente-medio",
+          "sourceTroops": 4,
+          "sourceContinent": "asia",
+          "targetId": "egito",
+          "targetTroops": 2,
+          "targetContinent": "africa",
+          "advantage": "medium"
+        }
+      ]
+    },
+    "response": {
+      "action": "attack",
+      "attackerTerritoryId": "oriente-medio",
+      "defenderTerritoryId": "polonia",
+      "attackDice": 3,
+      "skipAttack": false
     }
   }
 ]

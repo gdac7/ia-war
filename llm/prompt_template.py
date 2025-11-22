@@ -61,8 +61,8 @@ As an intermediate player, you already possess a sufficient knowledge, which all
 Your answer should be in the following JSON format: {phase_json_expected}\n
 You have an objective to win this game. Make the move that maximizes your chance of achieving your goal .
 The current phase is {phase}.
-Few examples of an expected response from you: {examples}\n
-The data about the game is: {data}\n
+Few examples of input (what you will receibe) and output (expected from you): {examples}\n
+The input about the game is: {data}\n
 {number_of_troops_text} 
 Your response must follow the phase pattern, which is: {pattern}\n
 Please provide your answer in the corresponding JSON format:\n{phase_json_expected}
@@ -78,7 +78,7 @@ Please provide your answer in the corresponding JSON format:\n{phase_json_expect
             number_of_troops_text = f"You have {data.get("totalAvailableTroops")} troops, so you need to use exactly this number in this move."
         else:
             number_of_troops_text = ""
-        few_shot = get_examples(2, phase)
+        few_shot = get_examples(3, phase)
         filled_sp = AIMedium.system_prompt.format(
             phase_json_expected=json_expected,
             pattern=pattern,
