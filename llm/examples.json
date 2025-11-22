@@ -1,95 +1,183 @@
 [
   {
-    "game_data": {
-      "objectiveType": "conquer_continents",
-      "totalAvailableTroops": 5,
-      "ownedTerritories": ["brazil", "argentina", "peru"]
+    "phase": "first_reinforcement",
+    "input": {
+      "objective": "conquistar na totalidade a AMÉRICA DO NORTE e a ÁFRICA",
+      "anywhereTroops": 4,
+      "restrictedTroops": {
+        "South America": 0, "North America": 0, "Europe": 0, "Asia": 0, "Africa": 0, "Oceania": 0
+      },
+      "ownedTerritories": {
+        "north_america": [
+          {"id": "ottawa", "name": "Ottawa", "troops": 1, "is_border": true}
+        ],
+        "africa": [
+          {"id": "egito", "name": "Egito", "troops": 1, "is_border": true}
+        ],
+        "asia": [
+          {"id": "china", "name": "China", "troops": 1, "is_border": true}
+        ]
+      },
+      "totalAvailableTroops": 4
     },
     "response": {
       "action": "first_reinforcement",
-      "placements": [{"territoryId": "brazil", "troops": 3}, {"territoryId": "argentina", "troops": 2}]
+      "placements": [
+        {"territoryId": "ottawa", "troops": 2},
+        {"territoryId": "egito", "troops": 2}
+      ]
     }
   },
   {
-    "game_data": {
-      "objectiveType": "destroy_player",
-      "totalAvailableTroops": 4,
-      "ownedTerritories": ["alaska", "alberta"]
+    "phase": "reinforcement",
+    "input": {
+      "objective": "Destruir o Exército Azul",
+      "anywhereTroops": 2,
+      "restrictedTroops": {
+        "South America": 2, "North America": 0, "Europe": 0, "Asia": 0, "Africa": 0, "Oceania": 0
+      },
+      "ownedTerritories": {
+        "south_america": [
+          {"id": "brasil", "name": "Brasil", "troops": 2, "is_border": true},
+          {"id": "argentina", "name": "Argentina", "troops": 1, "is_border": false}
+        ],
+        "europe": [
+          {"id": "polonia", "name": "Polônia", "troops": 1, "is_border": true}
+        ]
+      },
+      "totalAvailableTroops": 4
     },
     "response": {
       "action": "first_reinforcement",
-      "placements": [{"territoryId": "alaska", "troops": 4}]
+      "placements": [
+        {"territoryId": "brasil", "troops": 2},
+        {"territoryId": "polonia", "troops": 2}
+      ]
     }
   },
   {
-    "game_data": {
+    "phase": "first_reinforcement",
+    "input": {
+      "objective": "Conquistar a Europa e a Oceania",
+      "anywhereTroops": 3,
+      "restrictedTroops": {
+        "South America": 0, "North America": 0, "Europe": 0, "Asia": 0, "Africa": 0, "Oceania": 0
+      },
+      "ownedTerritories": {
+        "oceania": [
+          {"id": "indonesia", "name": "Indonésia", "troops": 1, "is_border": true},
+          {"id": "australia", "name": "Austrália", "troops": 2, "is_border": false}
+        ]
+      },
+      "totalAvailableTroops": 3
+    },
+    "response": {
+      "action": "first_reinforcement",
+      "placements": [
+        {"territoryId": "indonesia", "troops": 3}
+      ]
+    }
+  },
+  {
+    "phase": "attack",
+    "input": {
       "objectiveType": "conquer_continents",
-      "freeTroops": 3,
-      "totalAvailableTroops": 5,
-      "ownedTerritories": [
-        {"id": "brazil", "continent": "south_america", "troops": 1, "enemyNeighbors": ["north_africa"]},
-        {"id": "mexico", "continent": "north_america", "troops": 3, "enemyNeighbors": ["central_america"]}
-      ]
-    },
-    "response": {
-      "action": "reinforcement",
-      "placements": [{"territoryId": "brazil", "troops": 2}, {"territoryId": "mexico", "troops": 3}]
-    }
-  },
-  {
-    "game_data": {
-      "objectiveType": "destroy_player",
-      "totalAvailableTroops": 4,
-      "ownedTerritories": [
-        {"id": "iceland", "troops": 2, "enemyNeighbors": ["greenland"]},
-        {"id": "great_britain", "troops": 5, "enemyNeighbors": ["northern_europe"]}
-      ]
-    },
-    "response": {
-      "action": "reinforcement",
-      "placements": [{"territoryId": "great_britain", "troops": 4}]
-    }
-  },
-  {
-    "game_data": {
-      "objectiveType": "conquer_territories",
-      "territoriesCanAttackFrom": [
-        {"id": "alaska", "troops": 5, "maxDice": 3, "enemyNeighbors": [{"id": "kamchatka", "troops": 2}, {"id": "northwest_territory", "troops": 10}]}
+      "objectiveDescription": "Conquistar a América do Sul e a Europa",
+      "botName": "RedBot",
+      "validAttacks": [
+        {
+          "sourceId": "brasil",
+          "sourceTroops": 5,
+          "sourceContinent": "south_america",
+          "targetId": "argentina",
+          "targetTroops": 1,
+          "targetContinent": "south_america",
+          "advantage": "high"
+        },
+        {
+          "sourceId": "brasil",
+          "sourceTroops": 5,
+          "sourceContinent": "south_america",
+          "targetId": "argelia",
+          "targetTroops": 3,
+          "targetContinent": "africa",
+          "advantage": "medium"
+        }
       ]
     },
     "response": {
       "action": "attack",
-      "attackerTerritoryId": "alaska",
-      "defenderTerritoryId": "kamchatka",
+      "attackerTerritoryId": "brasil",
+      "defenderTerritoryId": "argentina",
       "attackDice": 3,
       "skipAttack": false
     }
   },
   {
-    "game_data": {
+    "phase": "attack",
+    "input": {
       "objectiveType": "conquer_continents",
-      "territoriesCanAttackFrom": [
-        {"id": "middle_east", "troops": 4, "maxDice": 3, "enemyNeighbors": [{"id": "egypt", "troops": 1}, {"id": "russia", "troops": 6}]}
-      ]
-    },
-    "response": {
-      "action": "attack",
-      "attackerTerritoryId": "middle_east",
-      "defenderTerritoryId": "egypt",
-      "attackDice": 3,
-      "skipAttack": false
-    }
-  },
-  {
-    "game_data": {
-      "objectiveType": "destroy_player",
-      "territoriesCanAttackFrom": [
-        {"id": "western_australia", "troops": 2, "maxDice": 1, "enemyNeighbors": [{"id": "eastern_australia", "troops": 5}]}
+      "objectiveDescription": "Conquistar a Ásia",
+      "botName": "BlueBot",
+      "validAttacks": [
+        {
+          "sourceId": "japao",
+          "sourceTroops": 2,
+          "sourceContinent": "asia",
+          "targetId": "vladivostok",
+          "targetTroops": 5,
+          "targetContinent": "asia",
+          "advantage": "low"
+        },
+        {
+          "sourceId": "japao",
+          "sourceTroops": 2,
+          "sourceContinent": "asia",
+          "targetId": "mongolia",
+          "targetTroops": 4,
+          "targetContinent": "asia",
+          "advantage": "low"
+        }
       ]
     },
     "response": {
       "action": "attack",
       "skipAttack": true
+    }
+  },
+  {
+    "phase": "attack",
+    "input": {
+      "objectiveType": "conquer_continents",
+      "objectiveDescription": "Conquistar a Europa e América do Norte",
+      "botName": "GreenBot",
+      "validAttacks": [
+        {
+          "sourceId": "oriente-medio",
+          "sourceTroops": 4,
+          "sourceContinent": "asia",
+          "targetId": "polonia",
+          "targetTroops": 2,
+          "targetContinent": "europe",
+          "advantage": "medium"
+        },
+        {
+          "sourceId": "oriente-medio",
+          "sourceTroops": 4,
+          "sourceContinent": "asia",
+          "targetId": "egito",
+          "targetTroops": 2,
+          "targetContinent": "africa",
+          "advantage": "medium"
+        }
+      ]
+    },
+    "response": {
+      "action": "attack",
+      "attackerTerritoryId": "oriente-medio",
+      "defenderTerritoryId": "polonia",
+      "attackDice": 3,
+      "skipAttack": false
     }
   }
 ]

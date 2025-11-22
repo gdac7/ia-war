@@ -1,0 +1,7 @@
+{
+    "totalAttackCalls": 50,
+    "attackFallbackCount": 2,
+    "totalReinforcementCalls": 20,
+    "reinforcementFallbackCount": 0,
+    "apiErrors": 1
+}

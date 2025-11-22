@@ -58,14 +58,11 @@ class AIMedium:
     system_prompt = """
 You are an intermediate player of the board game WAR.
 As an intermediate player, you already possess a sufficient knowledge, which allows you to make intelligent moves that give you an advantage in the short or long term.
-However, you are not advanced. You make mistakes and make plays that allow more experienced players to take advantage.
 Your answer should be in the following JSON format: {phase_json_expected}\n
-You will receive the current game data. The data follow the format: {game_data_json}\n
-You are currently playing a WAR game with players of different skill levels. 
 You have an objective to win this game. Make the move that maximizes your chance of achieving your goal .
-You are limited by the constraints of each phase. The current phase is {phase}.
-Few examples of an expected response from you: {examples}\n
-The data about the game is: {data}\n
+The current phase is {phase}.
+Few examples of input (what you will receibe) and output (expected from you): {examples}\n
+The input about the game is: {data}\n
 {number_of_troops_text} 
 Your response must follow the phase pattern, which is: {pattern}\n
 Please provide your answer in the corresponding JSON format:\n{phase_json_expected}
@@ -76,19 +73,16 @@ Please provide your answer in the corresponding JSON format:\n{phase_json_expect
 
     @staticmethod
     def get_medium_prompt(phase: str, data: str) -> PromptTemplate:
-        game_data_json, pattern, json_expected = PhasePrompt.get_phase_prompt(phase)
-        if phase == "first_reinforcement" or phase == "reinforcement": n = 5
-        elif phase == "attack": n = 2
-        few_shot = get_examples(3, phase)
+        pattern, json_expected = PhasePrompt.get_phase_prompt(phase)
         if data.get("totalAvailableTroops"):
             number_of_troops_text = f"You have {data.get("totalAvailableTroops")} troops, so you need to use exactly this number in this move."
         else:
             number_of_troops_text = ""
+        few_shot = get_examples(3, phase)
         filled_sp = AIMedium.system_prompt.format(
-            game_data_json=game_data_json,
             phase_json_expected=json_expected,
-            examples=json.dumps(few_shot),
             pattern=pattern,
+            examples=few_shot,
             phase=phase,
             data=data,
             number_of_troops_text=number_of_troops_text,
