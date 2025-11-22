@@ -1,174 +1,32 @@
 [
     {
         "phase": "first_reinforcement",
-        "time": 7.41394567489624
+        "time": 5.81566047668457,
+        "botName": "Neumann"
     },
     {
         "phase": "first_reinforcement",
-        "time": 7.773408889770508
+        "time": 5.881511211395264,
+        "botName": "Lovelace"
     },
     {
         "phase": "first_reinforcement",
-        "time": 5.457967519760132
+        "time": 5.654644250869751,
+        "botName": "Hopper"
     },
     {
         "phase": "first_reinforcement",
-        "time": 4.833891868591309
+        "time": 5.076538562774658,
+        "botName": "Turing"
     },
     {
         "phase": "reinforcement",
-        "time": 7.203989267349243
+        "time": 4.848149061203003,
+        "botName": "Neumann"
     },
     {
         "phase": "attack",
-        "time": 11.925206661224365
-    },
-    {
-        "phase": "reinforcement",
-        "time": 5.573680400848389
-    },
-    {
-        "phase": "first_reinforcement",
-        "time": 6.314461946487427
-    },
-    {
-        "phase": "first_reinforcement",
-        "time": 8.368768692016602
-    },
-    {
-        "phase": "first_reinforcement",
-        "time": 5.539352655410767
-    },
-    {
-        "phase": "first_reinforcement",
-        "time": 5.712389945983887
-    },
-    {
-        "phase": "reinforcement",
-        "time": 5.084960460662842
-    },
-    {
-        "phase": "attack",
-        "time": 12.940914869308472
-    },
-    {
-        "phase": "reinforcement",
-        "time": 5.749020576477051
-    },
-    {
-        "phase": "attack",
-        "time": 13.888405799865723
-    },
-    {
-        "phase": "attack",
-        "time": 1.434959888458252
-    },
-    {
-        "phase": "first_reinforcement",
-        "time": 8.575324058532715
-    },
-    {
-        "phase": "first_reinforcement",
-        "time": 5.951801776885986
-    },
-    {
-        "phase": "first_reinforcement",
-        "time": 5.662008762359619
-    },
-    {
-        "phase": "first_reinforcement",
-        "time": 5.115735292434692
-    },
-    {
-        "phase": "reinforcement",
-        "time": 5.246699094772339
-    },
-    {
-        "phase": "first_reinforcement",
-        "time": 6.044726610183716
-    },
-    {
-        "phase": "first_reinforcement",
-        "time": 4.719651460647583
-    },
-    {
-        "phase": "first_reinforcement",
-        "time": 8.875173330307007
-    },
-    {
-        "phase": "first_reinforcement",
-        "time": 4.624844551086426
-    },
-    {
-        "phase": "reinforcement",
-        "time": 5.116663217544556
-    },
-    {
-        "phase": "attack",
-        "time": 10.54366397857666
-    },
-    {
-        "phase": "attack",
-        "time": 10.155701160430908
-    },
-    {
-        "phase": "attack",
-        "time": 12.03059697151184
-    },
-    {
-        "phase": "first_reinforcement",
-        "time": 6.3150012493133545
-    },
-    {
-        "phase": "first_reinforcement",
-        "time": 8.756840467453003
-    },
-    {
-        "phase": "first_reinforcement",
-        "time": 5.5819947719573975
-    },
-    {
-        "phase": "first_reinforcement",
-        "time": 5.687092304229736
-    },
-    {
-        "phase": "reinforcement",
-        "time": 4.9351136684417725
-    },
-    {
-        "phase": "attack",
-        "time": 11.232502222061157
-    },
-    {
-        "phase": "attack",
-        "time": 9.300945281982422
-    },
-    {
-        "phase": "first_reinforcement",
-        "time": 6.881830453872681
-    },
-    {
-        "phase": "first_reinforcement",
-        "time": 8.596448421478271
-    },
-    {
-        "phase": "first_reinforcement",
-        "time": 5.429835319519043
-    },
-    {
-        "phase": "first_reinforcement",
-        "time": 4.539806127548218
-    },
-    {
-        "phase": "reinforcement",
-        "time": 5.788658142089844
-    },
-    {
-        "phase": "attack",
-        "time": 11.190106868743896
-    },
-    {
-        "phase": "attack",
-        "time": 8.6955087184906
+        "time": 11.496199131011963,
+        "botName": "Neumann"
     }
 ]
