@@ -19,6 +19,8 @@ class PhasePrompt:
                             1. Prioritize territories marked "is_border": true (they face enemies).
                             2. Do not reinforce "safe" territories (is_border: false) unless necessary.
                             3. Try to secure a role continent if you're close
+                        - Message (REQUIRED):
+                            Add a brief explanation of your move (max 15 words).
                 """
                 json_expected = f"""
                 {{
@@ -26,7 +28,8 @@ class PhasePrompt:
                     "placements": [
                         {{"territoryId": "id of the territory that will be reinforced", "troops": number_of_troops}},
                         {{"territoryId": "another_territory_id", "troops": number_of_troops}},
-                    ]
+                    ],
+                    "message": "brief explanation of your move (max 15 words)"
                 }}
                 """
             case "attack":
@@ -40,6 +43,8 @@ class PhasePrompt:
                             4. If all attacks have "low" advantage, choose "skipAttack": true.
                         - Constraint:
                             1. Yout must pick a pair (sourceId, targetId) exactly as listed in valid_attacks.
+                        - Message (REQUIRED):
+                            Add a brief explanation of your move (max 15 words).
                 """
                 json_expected = """
                 {
@@ -48,9 +53,10 @@ class PhasePrompt:
                     "defenderTerritoryId": "targetId_from_list",
                     "attackDice": int (usually min(3, sourceTroops - 1)),
                     "skipAttack": false,
+                    "message": "brief explanation of your move (max 15 words)"
                 }
                 OR
-                { "action": "attack", "skipAttack": true, }
+                { "action": "attack", "skipAttack": true, "message": "brief explanation of your move (max 15 words)" }
                 """
             case "strategic":
                 pattern = """
@@ -68,6 +74,8 @@ class PhasePrompt:
                         - Constraint:
                             1. You must pick a pair (fromId, toId) exactly as listed in validMoves.
                             2. troops must be <= availableTroops for that specific move.
+                        - Message (REQUIRED):
+                            Add a brief explanation of your move (max 15 words).
                 """
                 json_expected = """
                 {
@@ -75,9 +83,10 @@ class PhasePrompt:
                     "fromTerritoryId": "fromId_from_list",
                     "toTerritoryId": "toId_from_list",
                     "troops": int (between 1 and availableTroops),
-                    "skipMove": false
+                    "skipMove": false,
+                    "message": "brief explanation of your move (max 15 words)"
                 }
                 OR
-                { "action": "strategic", "skipMove": true }
+                { "action": "strategic", "skipMove": true, "message": "brief explanation of your move (max 15 words)" }
                 """
         return pattern, json_expected
