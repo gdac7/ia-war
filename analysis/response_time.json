@@ -1,347 +1,1622 @@
 [
     {
         "phase": "first_reinforcement",
-        "time": 9.665477752685547,
+        "time": 2.5329952239990234,
         "botName": "Neumann"
     },
     {
         "phase": "first_reinforcement",
-        "time": 5.8062684535980225,
+        "time": 1.341503620147705,
         "botName": "Lovelace"
     },
     {
         "phase": "first_reinforcement",
-        "time": 6.109144926071167,
+        "time": 1.2837927341461182,
         "botName": "Hopper"
     },
     {
         "phase": "first_reinforcement",
-        "time": 5.24906849861145,
+        "time": 3.006838798522949,
         "botName": "Turing"
     },
     {
         "phase": "first_reinforcement",
-        "time": 6.615198612213135,
+        "time": 1.3420593738555908,
         "botName": "Dijkstra"
     },
     {
         "phase": "reinforcement",
-        "time": 7.614244699478149,
+        "time": 1.5237689018249512,
         "botName": "Neumann"
     },
     {
         "phase": "attack",
-        "time": 13.627204656600952,
+        "time": 1.4643850326538086,
         "botName": "Neumann"
     },
     {
         "phase": "attack",
-        "time": 7.654482841491699,
+        "time": 0.9312756061553955,
         "botName": "Neumann"
     },
     {
         "phase": "attack",
-        "time": 9.63819169998169,
+        "time": 0.9227774143218994,
         "botName": "Neumann"
     },
     {
         "phase": "attack",
-        "time": 6.461259841918945,
+        "time": 0.9111428260803223,
         "botName": "Neumann"
     },
     {
         "phase": "attack",
-        "time": 2.9399631023406982,
+        "time": 0.7773289680480957,
         "botName": "Neumann"
     },
     {
         "phase": "attack",
-        "time": 4.305349349975586,
+        "time": 0.9846394062042236,
         "botName": "Neumann"
     },
     {
-        "phase": "reinforcement",
-        "time": 6.523430824279785,
+        "phase": "attack",
+        "time": 0.9389798641204834,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.803959846496582,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7011528015136719,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.33010005950927734,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "first_reinforcement",
+        "time": 1.3943543434143066,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "first_reinforcement",
+        "time": 1.826733112335205,
         "botName": "Lovelace"
     },
     {
-        "phase": "attack",
-        "time": 12.916337251663208,
-        "botName": "Lovelace"
-    },
-    {
-        "phase": "attack",
-        "time": 7.0636889934539795,
-        "botName": "Lovelace"
-    },
-    {
-        "phase": "reinforcement",
-        "time": 5.696101427078247,
+        "phase": "first_reinforcement",
+        "time": 1.2732014656066895,
         "botName": "Hopper"
     },
     {
-        "phase": "attack",
-        "time": 10.754246950149536,
-        "botName": "Hopper"
-    },
-    {
-        "phase": "attack",
-        "time": 7.8813605308532715,
-        "botName": "Hopper"
-    },
-    {
-        "phase": "attack",
-        "time": 6.356328725814819,
-        "botName": "Hopper"
-    },
-    {
-        "phase": "attack",
-        "time": 5.965785264968872,
-        "botName": "Hopper"
-    },
-    {
-        "phase": "attack",
-        "time": 5.058626651763916,
-        "botName": "Hopper"
-    },
-    {
-        "phase": "attack",
-        "time": 3.6108813285827637,
-        "botName": "Hopper"
-    },
-    {
-        "phase": "reinforcement",
-        "time": 7.431014060974121,
+        "phase": "first_reinforcement",
+        "time": 0.857431173324585,
         "botName": "Turing"
     },
     {
-        "phase": "attack",
-        "time": 9.493582248687744,
-        "botName": "Turing"
-    },
-    {
-        "phase": "attack",
-        "time": 5.733823299407959,
-        "botName": "Turing"
-    },
-    {
-        "phase": "attack",
-        "time": 4.4706830978393555,
-        "botName": "Turing"
-    },
-    {
-        "phase": "attack",
-        "time": 4.896629810333252,
-        "botName": "Turing"
-    },
-    {
-        "phase": "attack",
-        "time": 5.353250741958618,
-        "botName": "Turing"
-    },
-    {
-        "phase": "attack",
-        "time": 4.3296544551849365,
-        "botName": "Turing"
-    },
-    {
-        "phase": "attack",
-        "time": 4.129974126815796,
-        "botName": "Turing"
-    },
-    {
-        "phase": "reinforcement",
-        "time": 5.777669191360474,
-        "botName": "Dijkstra"
-    },
-    {
-        "phase": "attack",
-        "time": 11.946150302886963,
-        "botName": "Dijkstra"
-    },
-    {
-        "phase": "attack",
-        "time": 4.430301189422607,
-        "botName": "Dijkstra"
-    },
-    {
-        "phase": "attack",
-        "time": 5.311326503753662,
-        "botName": "Dijkstra"
-    },
-    {
-        "phase": "attack",
-        "time": 3.8678817749023438,
-        "botName": "Dijkstra"
-    },
-    {
-        "phase": "attack",
-        "time": 4.733954906463623,
-        "botName": "Dijkstra"
-    },
-    {
-        "phase": "attack",
-        "time": 3.6849050521850586,
+        "phase": "first_reinforcement",
+        "time": 1.2308709621429443,
         "botName": "Dijkstra"
     },
     {
         "phase": "reinforcement",
-        "time": 8.120292901992798,
+        "time": 0.9394900798797607,
         "botName": "Neumann"
     },
     {
         "phase": "attack",
-        "time": 8.69608736038208,
+        "time": 1.0506319999694824,
         "botName": "Neumann"
     },
     {
         "phase": "attack",
-        "time": 3.1940698623657227,
+        "time": 0.8046460151672363,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7024638652801514,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7438318729400635,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.6473360061645508,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7024762630462646,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.6387712955474854,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.766099214553833,
         "botName": "Neumann"
     },
     {
         "phase": "reinforcement",
-        "time": 6.576690912246704,
+        "time": 1.8816101551055908,
         "botName": "Lovelace"
     },
     {
         "phase": "attack",
-        "time": 14.16080904006958,
+        "time": 1.10109543800354,
         "botName": "Lovelace"
     },
     {
         "phase": "attack",
-        "time": 6.504920482635498,
+        "time": 0.8428394794464111,
         "botName": "Lovelace"
     },
     {
         "phase": "attack",
-        "time": 4.926954746246338,
+        "time": 0.8652746677398682,
         "botName": "Lovelace"
     },
     {
         "phase": "attack",
-        "time": 5.123566627502441,
+        "time": 0.8383429050445557,
         "botName": "Lovelace"
     },
     {
         "phase": "attack",
-        "time": 4.206804513931274,
+        "time": 0.8597507476806641,
         "botName": "Lovelace"
     },
     {
         "phase": "attack",
-        "time": 7.8854453563690186,
+        "time": 1.3228271007537842,
         "botName": "Lovelace"
     },
     {
         "phase": "attack",
-        "time": 5.698608636856079,
+        "time": 0.7446622848510742,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7166805267333984,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.33751583099365234,
         "botName": "Lovelace"
     },
     {
         "phase": "reinforcement",
-        "time": 5.428143262863159,
+        "time": 0.9638500213623047,
         "botName": "Hopper"
     },
     {
         "phase": "attack",
-        "time": 9.779838800430298,
+        "time": 1.0923020839691162,
         "botName": "Hopper"
     },
     {
         "phase": "attack",
-        "time": 4.450887680053711,
+        "time": 0.8251101970672607,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 0.8560097217559814,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7088916301727295,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.8077278137207031,
         "botName": "Hopper"
     },
     {
         "phase": "reinforcement",
-        "time": 7.938454627990723,
+        "time": 0.8706841468811035,
         "botName": "Turing"
     },
     {
         "phase": "attack",
-        "time": 7.953094244003296,
-        "botName": "Turing"
-    },
-    {
-        "phase": "reinforcement",
-        "time": 5.8068578243255615,
-        "botName": "Dijkstra"
-    },
-    {
-        "phase": "attack",
-        "time": 9.543832540512085,
-        "botName": "Dijkstra"
-    },
-    {
-        "phase": "attack",
-        "time": 3.96871280670166,
-        "botName": "Dijkstra"
-    },
-    {
-        "phase": "reinforcement",
-        "time": 6.448983430862427,
-        "botName": "Neumann"
-    },
-    {
-        "phase": "attack",
-        "time": 8.11277985572815,
-        "botName": "Neumann"
-    },
-    {
-        "phase": "attack",
-        "time": 3.3031270503997803,
-        "botName": "Neumann"
-    },
-    {
-        "phase": "reinforcement",
-        "time": 6.813154458999634,
-        "botName": "Lovelace"
-    },
-    {
-        "phase": "attack",
-        "time": 12.511173248291016,
-        "botName": "Lovelace"
-    },
-    {
-        "phase": "attack",
-        "time": 4.428277015686035,
-        "botName": "Lovelace"
-    },
-    {
-        "phase": "attack",
-        "time": 4.232605934143066,
-        "botName": "Lovelace"
-    },
-    {
-        "phase": "attack",
-        "time": 3.159431219100952,
-        "botName": "Lovelace"
-    },
-    {
-        "phase": "reinforcement",
-        "time": 5.294706106185913,
-        "botName": "Hopper"
-    },
-    {
-        "phase": "attack",
-        "time": 11.881630182266235,
-        "botName": "Hopper"
-    },
-    {
-        "phase": "attack",
-        "time": 4.065490961074829,
-        "botName": "Hopper"
-    },
-    {
-        "phase": "reinforcement",
-        "time": 5.9313578605651855,
+        "time": 1.0539495944976807,
         "botName": "Turing"
     },
     {
         "phase": "attack",
-        "time": 7.793391227722168,
+        "time": 0.7817347049713135,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.8049805164337158,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.726647138595581,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7301905155181885,
+        "botName": "Turing"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.6295671463012695,
+        "botName": "Turing"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.8390610218048096,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "attack",
+        "time": 1.2392685413360596,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "attack",
+        "time": 0.898017406463623,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7815432548522949,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "attack",
+        "time": 1.5461039543151855,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.7036025524139404,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.8888881206512451,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9907412528991699,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7097089290618896,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.338392972946167,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.8895671367645264,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 1.050034999847412,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 0.6499018669128418,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.34084606170654297,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.9229803085327148,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 1.0888640880584717,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7120015621185303,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7246661186218262,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 0.881394624710083,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "first_reinforcement",
+        "time": 1.2207212448120117,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "first_reinforcement",
+        "time": 1.248903751373291,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "first_reinforcement",
+        "time": 1.2923932075500488,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "first_reinforcement",
+        "time": 1.3561053276062012,
+        "botName": "Turing"
+    },
+    {
+        "phase": "first_reinforcement",
+        "time": 1.277836561203003,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 1.0766611099243164,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 1.0590064525604248,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.790433406829834,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.79551100730896,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7535359859466553,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7417852878570557,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.6624755859375,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.8038206100463867,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.8564441204071045,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 1.2741875648498535,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9667556285858154,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 0.8100020885467529,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7685284614562988,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7467095851898193,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 0.6374468803405762,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 0.6811699867248535,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.3321187496185303,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 1.1089930534362793,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 1.2789289951324463,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9123854637145996,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9176325798034668,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 0.969698429107666,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.6790919303894043,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.8660037517547607,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 1.0660207271575928,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7724270820617676,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.6690201759338379,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.6670465469360352,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.6618771553039551,
+        "botName": "Turing"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.7459330558776855,
+        "botName": "Turing"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.887465238571167,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "attack",
+        "time": 1.2714810371398926,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "attack",
+        "time": 0.767697811126709,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9135797023773193,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.6357762813568115,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 1.1285114288330078,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9618468284606934,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.6840834617614746,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.6882829666137695,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.3397061824798584,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.855036735534668,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 1.0527098178863525,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7448105812072754,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.3332967758178711,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 1.7662067413330078,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 1.3288156986236572,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9504625797271729,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 0.8470413684844971,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9592976570129395,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 0.8649349212646484,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.8174827098846436,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.9445381164550781,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 1.0530047416687012,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.8477833271026611,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7697536945343018,
+        "botName": "Turing"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.4567272663116455,
+        "botName": "Turing"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.9016728401184082,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "attack",
+        "time": 1.2796854972839355,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "attack",
+        "time": 1.0121829509735107,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.895848274230957,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.935185432434082,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 1.0110280513763428,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.6848630905151367,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.35028791427612305,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.8958630561828613,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 1.0326614379882812,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7262942790985107,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.3444671630859375,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.9533834457397461,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 1.1338539123535156,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 0.730726957321167,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "first_reinforcement",
+        "time": 1.1875286102294922,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "first_reinforcement",
+        "time": 1.311913251876831,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "first_reinforcement",
+        "time": 0.8645029067993164,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "first_reinforcement",
+        "time": 0.8478336334228516,
+        "botName": "Turing"
+    },
+    {
+        "phase": "first_reinforcement",
+        "time": 0.8971157073974609,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 1.1229331493377686,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 1.0645256042480469,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7902681827545166,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7910885810852051,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7517187595367432,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7431900501251221,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7457802295684814,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7590785026550293,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.4319159984588623,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 1.0805540084838867,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 1.225327491760254,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 0.8372151851654053,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9129810333251953,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.722254753112793,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.8922841548919678,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 1.2654926776885986,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 1.5851728916168213,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9512069225311279,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9508194923400879,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 0.8535852432250977,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7809550762176514,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7072362899780273,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.3316223621368408,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 1.0464832782745361,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 1.205976963043213,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9070749282836914,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.8607103824615479,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.8242225646972656,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7495937347412109,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.6591119766235352,
+        "botName": "Turing"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.6857292652130127,
+        "botName": "Turing"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.8411192893981934,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "attack",
+        "time": 1.193350076675415,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "attack",
+        "time": 0.8759701251983643,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9298985004425049,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "attack",
+        "time": 1.3601298332214355,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "attack",
+        "time": 0.8848316669464111,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7200796604156494,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "attack",
+        "time": 0.6666431427001953,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "attack",
+        "time": 0.6683435440063477,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.47911620140075684,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.8619480133056641,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9612371921539307,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.39674854278564453,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.8425559997558594,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 1.1117267608642578,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7894477844238281,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9556183815002441,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9325013160705566,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 0.834132194519043,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.48456263542175293,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.9064991474151611,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 1.194021463394165,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 0.8019289970397949,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.4909074306488037,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.8842737674713135,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9662330150604248,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7402441501617432,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.8272125720977783,
+        "botName": "Turing"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.4822378158569336,
+        "botName": "Turing"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 1.0911061763763428,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "attack",
+        "time": 1.1264410018920898,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7341508865356445,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7514896392822266,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.47649383544921875,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.8606808185577393,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 1.02889084815979,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.8686621189117432,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "strategic",
+        "time": 1.4104719161987305,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.9185831546783447,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 1.0201406478881836,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 0.8374354839324951,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.4640960693359375,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.809340238571167,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 1.0693485736846924,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7213702201843262,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.4728708267211914,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 1.0176467895507812,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 1.070500373840332,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.8563408851623535,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.831092119216919,
+        "botName": "Turing"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.45017075538635254,
+        "botName": "Turing"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.8143584728240967,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9985597133636475,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "attack",
+        "time": 0.6795802116394043,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "strategic",
+        "time": 1.1264524459838867,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.8795559406280518,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9945082664489746,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.6400065422058105,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.9002344608306885,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 1.2645506858825684,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9751696586608887,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 0.6805922985076904,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7595288753509521,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.46253395080566406,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.7990102767944336,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 1.0398585796356201,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.6781449317932129,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 1.202026605606079,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 1.035172939300537,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7401540279388428,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.8626031875610352,
+        "botName": "Turing"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.33173084259033203,
+        "botName": "Turing"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.8590960502624512,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "attack",
+        "time": 1.051959753036499,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "attack",
+        "time": 0.6410417556762695,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.45098352432250977,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.8668036460876465,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 1.0080437660217285,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.6849040985107422,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "strategic",
+        "time": 1.1631605625152588,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 1.0833888053894043,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9870593547821045,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7954151630401611,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 0.6820406913757324,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.570838451385498,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.6185004711151123,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9326210021972656,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 1.515061378479004,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.4530940055847168,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 1.0852770805358887,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9205985069274902,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.8936083316802979,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.8719229698181152,
+        "botName": "Turing"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.5661261081695557,
+        "botName": "Turing"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.8185915946960449,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "attack",
+        "time": 1.043102502822876,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9497716426849365,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.33645057678222656,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 1.0997037887573242,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9274890422821045,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.9450392723083496,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 1.2625136375427246,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 1.101301908493042,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7554244995117188,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9401054382324219,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 0.8702518939971924,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.5549943447113037,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.8151357173919678,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9902749061584473,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 0.6704649925231934,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.6012370586395264,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 1.2639400959014893,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9781506061553955,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.6863179206848145,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.931147575378418,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.8793060779571533,
+        "botName": "Turing"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.5636630058288574,
+        "botName": "Turing"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.8095910549163818,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9648778438568115,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "attack",
+        "time": 0.6854918003082275,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.603240966796875,
+        "botName": "Dijkstra"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.8873195648193359,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 1.0351629257202148,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9863295555114746,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.866741418838501,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9120762348175049,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.7872366905212402,
+        "botName": "Neumann"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.902545690536499,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 0.9749085903167725,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "attack",
+        "time": 0.8404057025909424,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.5549230575561523,
+        "botName": "Lovelace"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 0.8437354564666748,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 1.0265262126922607,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "attack",
+        "time": 0.741804838180542,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.5679278373718262,
+        "botName": "Hopper"
+    },
+    {
+        "phase": "reinforcement",
+        "time": 1.1070008277893066,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 1.7920098304748535,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.7392234802246094,
+        "botName": "Turing"
+    },
+    {
+        "phase": "attack",
+        "time": 0.8615095615386963,
+        "botName": "Turing"
+    },
+    {
+        "phase": "strategic",
+        "time": 0.5680806636810303,
         "botName": "Turing"
     }
 ]

@@ -1,7 +1,9 @@
 {
-    "totalAttackCalls": 50,
-    "attackFallbackCount": 2,
-    "totalReinforcementCalls": 20,
+    "totalAttackCalls": 103,
+    "attackFallbackCount": 3,
+    "totalReinforcementCalls": 40,
     "reinforcementFallbackCount": 0,
-    "apiErrors": 1
+    "totalStrategicCalls": 34,
+    "strategicFallbackCount": 1,
+    "apiErrors": 0
 }

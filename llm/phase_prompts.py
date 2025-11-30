@@ -53,6 +53,31 @@ class PhasePrompt:
                 { "action": "attack", "skipAttack": true, }
                 """
             case "strategic":
-                pattern = """"""
-                json_expected = """"""
+                pattern = """
+                    strategic:
+                        - Goal: Reposition your forces for better defense or future attacks.
+                        - Rules:
+                            1. 'validMoves' contains all possible movements between adjacent territories.
+                            2. Each move shows 'fromId', 'toId', 'availableTroops'.
+                            3. id format: Use the exact 'id' string from validMoves.
+                        - Strategy:
+                            1. Review the list of "validMoves".
+                            2. Prioritize moving troops to border territories (is_border: true).
+                            3. Consider your objective when deciding where to move troops.
+                            4. If no move seems beneficial, choose "skipMove": true.
+                        - Constraint:
+                            1. You must pick a pair (fromId, toId) exactly as listed in validMoves.
+                            2. troops must be <= availableTroops for that specific move.
+                """
+                json_expected = """
+                {
+                    "action": "strategic",
+                    "fromTerritoryId": "fromId_from_list",
+                    "toTerritoryId": "toId_from_list",
+                    "troops": int (between 1 and availableTroops),
+                    "skipMove": false
+                }
+                OR
+                { "action": "strategic", "skipMove": true }
+                """
         return pattern, json_expected

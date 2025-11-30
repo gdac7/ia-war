@@ -10,13 +10,13 @@ def load_transformers_model(model_name, quantization_config):
     model = AutoModelForCausalLM.from_pretrained(
             model_name,
             quantization_config=quantization_config,
-            device_map="auto",
+            device_map="cuda",
             torch_dtype=torch.bfloat16
         )
     tokenizer = AutoTokenizer.from_pretrained(
             model_name,
             padding_side="left"
-    )
+    ).to("cuda")
     return model, tokenizer
 
 def load_llamacpp_model(repo_id, filename):

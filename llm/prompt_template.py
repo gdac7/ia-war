@@ -29,6 +29,7 @@ import textwrap
 #         - Objective: Move troops between your own adjacent territories (one move per turn);
 #         - Parameters needed: fromTerritoryId (your territory to move troops from), toTerritoryId (your territory to move troops to) and troops (number of troops to move);
 #         - Constraints: Both territories must be owned by you. Territories must be neighbors. Source territory must keep at least 1 troop. Can oly move troops that were available at phase start (troops - 1 per territory). Only one strategic move allowed per turn.
+#         - Restrição de "um único movimento": Isso significa que você pode mover exércitos de um dos seus territórios para um território adjacente de sua propriedade. Você não pode, por exemplo, mover exércitos de A para B e, em seguida, mover esses mesmos exércitos de B para C na mesma jogada.
 
 def get_examples(n, phase):
     with open("llm/examples.json", "r") as f:

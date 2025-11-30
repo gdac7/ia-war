@@ -64,6 +64,18 @@ async def attack_endpoint(request: GenerationRequest):
     return {"generated_json": generated_json, "duration_time": f"{duration_time:.2f}s"}
 
 
+@app.post("/strategic", response_model=GenerationResponse)
+async def strategic_endpoint(request: GenerationRequest):
+    start = time.time()
+    ai = AIWar(app.state.model)
+    bot_name = request.data.pop("botName")
+    generated_json = ai.strategic(
+        player_data=request.data
+    )
+    duration_time = time.time() - start
+    save_data(app, "strategic", duration_time, bot_name)
+    return {"generated_json": generated_json, "duration_time": f"{duration_time:.2f}s"}
+
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8080)
